@@ -20,6 +20,15 @@ Route::get('/index', function () {
     return view('index');
 });
 
+Route::get('/product', function () {
+    return view('product');
+});
+
+Route::get('/detail', function () {
+    return view('detailProduct');
+});
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
@@ -32,6 +41,7 @@ Route::get('/contact', function () {
     return view('contact');
 });
 
-Route::get('/product', function () {
-    return view('product');
+Route::get('/cekout', function () {
+    return view('checkout');
 });
+
