@@ -15,4 +15,12 @@ class Order extends Model
         'TotalUser',
         'BuktiPembayaran',
     ];
+
+    public function user_id(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function order_detail(){
+        return $this->hasMany(Order_Details::class);
+    }
 }
