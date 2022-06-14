@@ -15,4 +15,12 @@ class Order_Detail extends Model
         'Qty',
         'Subtotal',
     ];
+
+    public function order_id(){
+        return $this->belongsTo(Order::class);
+    }
+
+    public function product_id(){
+        return $this->belongsTo(Product::class);
+    }
 }
