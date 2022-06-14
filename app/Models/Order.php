@@ -2,8 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\User;
+use App\Models\Order_Detail;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Order extends Model
 {
@@ -21,6 +23,6 @@ class Order extends Model
     }
 
     public function order_detail(){
-        return $this->hasMany(Order_Details::class);
+        return $this->hasMany(Order_Detail::class);
     }
 }
