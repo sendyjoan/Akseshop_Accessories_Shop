@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Site Metas -->
-    <title>Lizzy Acc&HandCraft</title>
+    <title>Akse Shop</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -76,14 +76,6 @@
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                        <li class="dropdown">
-                            <a href="#" class="nav-link dropdown-toggle arrow" data-toggle="dropdown">SHOP</a>
-                            <ul class="dropdown-menu">
-								<li><a href="shop.html">Shop</a></li>
-								<li><a href="shop-detail.html">Detail</a></li>
-                                <li><a href="wishlist.html">Wishlist</a></li>
-                            </ul>
-                        </li>
                         <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
                         <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
                         

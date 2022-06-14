@@ -72,3 +72,11 @@ Route::get('/indexAdmin', function () {
 Route::get('/customerAdmin', function () {
     return view('Admin/customer/customerAdmin');
 });
+
+Route::get('/kategori', function () {
+    return view('Admin/Kategori/kategoriIndex');
+});
+
+Route::get('/barang', function () {
+    return view('Admin/Barang/barangIndex');
+});

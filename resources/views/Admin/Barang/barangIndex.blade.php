@@ -15,12 +15,12 @@
                                 <tr class="text-white">
                                     <th scope="col"><input class="form-check-input" type="checkbox"></th>
                                     <th scope="col">ID</th>
-                                    <th scope="col">Nama Pelanggan</th>
-                                    <th scope="col">Nomor Handphone</th>
-                                    <th scope="col">Alamat</th>
-                                    <th scope="col">Email</th>
-                                    <th scope="col">Detail Action</th>
-                                    <th scope="col"> Delete Action</th>
+                                    <th scope="col">Nama Barang</th>
+                                    <th scope="col">Deskripsi</th>
+                                    <th scope="col">Stock</th>
+                                    <th scope="col">Harga</th>
+                                    <th scope="col">Action</th>
+                                    
 
                                 </tr>
                             </thead>
@@ -28,63 +28,74 @@
                                 <tr>
                                     <td><input class="form-check-input" type="checkbox"></td>
                                     <td>01</td>
-                                    <td>Johasn</td>
-                                    <td>0852345678</td>
-                                    <td>Malang</td>
-                                    <td>xxx@gmail.com</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Details</a></td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Delete</a></td>
+                                    <td>Jam Tangan Rolex</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci a ea tenetur porro fugit consequuntur numquam quam quos. </td>
+                                    <td>10</td>
+                                    <td>15000</td>
+                                    <td><a class="btn btn-sm btn-primary" href="">Show</a>
+                                    <a class="btn btn-sm btn-primary" href="">Update</a>
+                                    <a class="btn btn-sm btn-primary" href="">Delete</a></td>
                                     
                                 </tr>
                                 <tr>
-                                <td><input class="form-check-input" type="checkbox"></td>
+                                    <td><input class="form-check-input" type="checkbox"></td>
                                     <td>01</td>
-                                    <td>Johasn</td>
-                                    <td>0852345678</td>
-                                    <td>Malang</td>
-                                    <td>xxx@gmail.com</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Delete</a></td>
+                                    <td>Jam Tangan Rolex</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci a ea tenetur porro fugit consequuntur numquam quam quos. </td>
+                                    <td>10</td>
+                                    <td>15000</td>
+                                    <td><a class="btn btn-sm btn-primary" href="">Show</a>
+                                    <a class="btn btn-sm btn-primary" href="">Update</a>
+                                    <a class="btn btn-sm btn-primary" href="">Delete</a></td>
+                                    
                                 </tr>
                                 <tr>
-                                <td><input class="form-check-input" type="checkbox"></td>
+                                    <td><input class="form-check-input" type="checkbox"></td>
                                     <td>01</td>
-                                    <td>Johasn</td>
-                                    <td>0852345678</td>
-                                    <td>Malang</td>
-                                    <td>xxx@gmail.com</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Delete</a></td>
+                                    <td>Jam Tangan Rolex</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci a ea tenetur porro fugit consequuntur numquam quam quos. </td>
+                                    <td>10</td>
+                                    <td>15000</td>
+                                    <td><a class="btn btn-sm btn-primary" href="">Show</a>
+                                    <a class="btn btn-sm btn-primary" href="">Update</a>
+                                    <a class="btn btn-sm btn-primary" href="">Delete</a></td>
+                                    
                                 </tr>
                                 <tr>
-                                <td><input class="form-check-input" type="checkbox"></td>
+                                    <td><input class="form-check-input" type="checkbox"></td>
                                     <td>01</td>
-                                    <td>Johasn</td>
-                                    <td>0852345678</td>
-                                    <td>Malang</td>
-                                    <td>xxx@gmail.com</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Delete</a></td>
+                                    <td>Jam Tangan Rolex</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci a ea tenetur porro fugit consequuntur numquam quam quos. </td>
+                                    <td>10</td>
+                                    <td>15000</td>
+                                    <td><a class="btn btn-sm btn-primary" href="">Show</a>
+                                    <a class="btn btn-sm btn-primary" href="">Update</a>
+                                    <a class="btn btn-sm btn-primary" href="">Delete</a></td>
+                                    
                                 </tr>
                                 <tr>
-                                <td><input class="form-check-input" type="checkbox"></td>
+                                    <td><input class="form-check-input" type="checkbox"></td>
                                     <td>01</td>
-                                    <td>Johasn</td>
-                                    <td>0852345678</td>
-                                    <td>Malang</td>
-                                    <td>xxx@gmail.com</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Delete</a></td>
+                                    <td>Jam Tangan Rolex</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci a ea tenetur porro fugit consequuntur numquam quam quos. </td>
+                                    <td>10</td>
+                                    <td>15000</td>
+                                    <td><a class="btn btn-sm btn-primary" href="">Show</a>
+                                    <a class="btn btn-sm btn-primary" href="">Update</a>
+                                    <a class="btn btn-sm btn-primary" href="">Delete</a></td>
+                                    
                                 </tr>
                                 <tr>
-                                <td><input class="form-check-input" type="checkbox"></td>
+                                    <td><input class="form-check-input" type="checkbox"></td>
                                     <td>01</td>
-                                    <td>Johasn</td>
-                                    <td>0852345678</td>
-                                    <td>Malang</td>
-                                    <td>xxx@gmail.com</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Detail</a></td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Delete</a></td>
+                                    <td>Jam Tangan Rolex</td>
+                                    <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci a ea tenetur porro fugit consequuntur numquam quam quos. </td>
+                                    <td>10</td>
+                                    <td>15000</td>
+                                    <td><a class="btn btn-sm btn-primary" href="">Show</a>
+                                    <a class="btn btn-sm btn-primary" href="">Update</a>
+                                    <a class="btn btn-sm btn-primary" href="">Delete</a></td>
+                                    
                                 </tr>
                             </tbody>
                         </table>

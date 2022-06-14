@@ -53,7 +53,7 @@
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-secondary navbar-dark">
                 <a href="index.html" class="navbar-brand mx-4 mb-3">
-                    <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>DarkPan</h3>
+                    <h3 class="text-primary"><i class="fa fa-user-edit me-2"></i>AKSESHOP</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
@@ -70,15 +70,8 @@
                     <a href="/customerAdmin" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Daftar Pelanggan</a>
                     <a href="#" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Daftar Transaksi</a>
                     <a href="#" class="nav-item nav-link"><i class="fa fa-table me-2"></i> Barang</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="far fa-file-alt me-2"></i>Kategori Barang</a>
-                        <div class="dropdown-menu bg-transparent border-0">
-                            <a href="#" class="dropdown-item">Gelang</a>
-                            <a href="#" class="dropdown-item">Kalung</a>
-                            <a href="#" class="dropdown-item">Jam Tangan</a>
-                            <a href="#" class="dropdown-item">Topi</a>
-                        </div>
-                    </div>
+                    <a href="#" class="nav-item nav-link"><i class="fa fa-table me-2"></i> Kategori Barang</a>
+                    
                 </div>
             </nav>
         </div>

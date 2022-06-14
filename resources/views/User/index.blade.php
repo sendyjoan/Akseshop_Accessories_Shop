@@ -10,7 +10,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="m-b-20"><strong>Welcome To <br> LIZZY</strong></h1>
+                            <h1 class="m-b-20"><strong>Welcome To <br> AKSESHOP</strong></h1>
                             <p class="m-b-40">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae, <br> trends to see any changes in performance over time.</p>
                             <p><a class="btn hvr-hover" href="#">Shop New</a></p>
                         </div>
