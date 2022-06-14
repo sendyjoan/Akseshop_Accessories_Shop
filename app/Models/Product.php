@@ -18,4 +18,12 @@ class Product extends Model
         'Harga',
         'Gambar',
     ];
+
+    public function category_id(){
+        return $this->belongsTo(Category::class);
+    }
+
+    public function order_detail(){
+        return $this->hasMany(Order_Detail::class);
+    }
 }
