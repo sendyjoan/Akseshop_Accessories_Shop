@@ -14,4 +14,8 @@ class Role extends Model
         'Idrole',
         'Role',
     ];
+
+    public function user(){
+        return $this->hasMany(User::class);
+    }
 }

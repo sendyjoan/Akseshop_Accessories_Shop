@@ -14,4 +14,8 @@ class Gender extends Model
         'Idgender',
         'Gender',
     ];
+
+    public function user(){
+        return $this->hasMany(User::class);
+    }
 }
