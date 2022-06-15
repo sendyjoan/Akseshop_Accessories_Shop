@@ -30,7 +30,7 @@ Route::get('/editProfile', function () {
 
 Route::get('/chart', function () {
     return view('User/chart');// Show Chart
-});
+})->middleware('checkRole: 2');
 
 
 
