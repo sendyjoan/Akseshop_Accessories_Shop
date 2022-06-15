@@ -103,7 +103,7 @@
                                                 required autocomplete="email" autofocus
                                                 style="border-radius: 30px; height: 45px;">
 
-                                            @error('username')
+                                            @error('email')
                                                 <span class="invalid-feedback" role="alert">
                                                     <strong>{{ $message }}</strong>
                                                 </span>
