@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LandingPageController;
 
 /*
@@ -19,6 +21,11 @@ use App\Http\Controllers\LandingPageController;
 Route::get('/', [LandingPageController::class, 'landingpage']); //Menampilkan Landing Page
 Route::get('/about', [LandingPageController::class, 'aboutus']); //Menampilkan Halaman About Us
 Route::get('/product', [LandingPageController::class, 'product']); //Menampilkan Halaman Product
+
+Route::prefix('dashboard')->group(function () {
+    Route::get('/', [AdminController::class, 'index']);
+    Route::get('/user', [UserController::class, 'index']);
+});
 
 Route::get('/detail', function () {
     return view('User/detailProduct');// Show Detail Product
@@ -49,9 +56,9 @@ Route::get('/alert', function () {
 });
 
 // admin
-Route::get('/indexAdmin', function () {
-    return view('Admin/indexAdmin');// View Dashboard
-});
+// Route::get('/indexAdmin', function () {
+//     return view('Admin/indexAdmin');// View Dashboard
+// });
 
 // Route::get('/customerAdmin', function () {
 //     return view('Admin/customerAdmin');
