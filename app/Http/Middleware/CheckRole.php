@@ -19,13 +19,17 @@ class CheckRole
     {
         $roles = array_slice(func_get_args(), 2);
 
-    foreach ($roles as $role) { 
-        $user = Auth::user()->role_id;
-        if( $user == $role){
-            return $next($request);
+        if (! Auth::user()) {
+            return redirect('/');
         }
-    }
 
-    return redirect('/');
+        foreach ($roles as $role) { 
+            $user = Auth::user()->role_id;
+            if( $user == $role){
+                return $next($request);
+            }
+        }
+
+        return redirect('/');
     }
 }
