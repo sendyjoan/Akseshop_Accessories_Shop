@@ -55,13 +55,11 @@
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
-                        <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
+                        <li class="nav-item active"><a class="nav-link" href="/index">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="/product">Gallery</a></li>
                         <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
-                       
                         
                         <li class="nav-item">
-                        <div class="login-box">
 						        <select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
 							        <option > Register Here</option>
                                     <option>Sign In</option>

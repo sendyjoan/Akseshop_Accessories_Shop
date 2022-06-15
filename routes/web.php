@@ -1,6 +1,9 @@
 <?php
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LandingPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,27 +16,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('/index', function () {
-    return view('User/index');
-});
-
-Route::get('/product', function () {
-    return view('User/product');
-});
+Route::get('/', [LandingPageController::class, 'landingpage']); //Menampilkan Landing Page
+Route::get('/about', [LandingPageController::class, 'aboutus']); //Menampilkan Halaman About Us
+Route::get('/product', [LandingPageController::class, 'product']); //Menampilkan Halaman Product
 
 Route::get('/detail', function () {
-    return view('User/detailProduct');
+    return view('User/detailProduct');// Show Detail Product
 });
 
 Route::get('/editProfile', function () {
-    return view('User/editProfile');
+    return view('User/editProfile');// Edit Profile User (RF)
 });
 
 Route::get('/chart', function () {
-    return view('User/chart');
+    return view('User/chart');// Show Chart
 });
 
 
@@ -42,27 +38,19 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/about', function () {
-    return view('User/About');
-});
-
-Route::get('/contact', function () {
-    return view('contact');
-});
-
 Route::get('/cekout', function () {
-    return view('User/checkout');
+    return view('User/checkout');// Checkout Page
 });
 
 
 
 Route::get('/alert', function () {
-    return view('alert');
+    return view('alert');// View Not Found
 });
 
 // admin
 Route::get('/indexAdmin', function () {
-    return view('Admin/indexAdmin');
+    return view('Admin/indexAdmin');// View Dashboard
 });
 
 // Route::get('/customerAdmin', function () {
@@ -70,13 +58,13 @@ Route::get('/indexAdmin', function () {
 // });
 
 Route::get('/customerAdmin', function () {
-    return view('Admin/customer/customerAdmin');
+    return view('Admin/customer/customerAdmin');//View List User
 });
 
 Route::get('/kategori', function () {
-    return view('Admin/Kategori/kategoriIndex');
+    return view('Admin/Kategori/kategoriIndex');// View List Kategori
 });
 
 Route::get('/barang', function () {
-    return view('Admin/Barang/barangIndex');
+    return view('Admin/Barang/barangIndex');// View List Barang
 });

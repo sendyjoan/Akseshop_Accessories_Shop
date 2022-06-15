@@ -94,13 +94,13 @@
 
                                     <div class="row mb-3">
                                         <div class="col-md-10">
-                                            <input id="username" 
-                                                type="username" 
-                                                class="form-control @error('username') is-invalid @enderror" 
-                                                placeholder="Username"
-                                                name="username" 
-                                                value="{{ old('username') }}" 
-                                                required autocomplete="username" autofocus
+                                            <input id="email" 
+                                                type="email" 
+                                                class="form-control @error('email') is-invalid @enderror" 
+                                                placeholder="Email"
+                                                name="email" 
+                                                value="{{ old('email') }}" 
+                                                required autocomplete="email" autofocus
                                                 style="border-radius: 30px; height: 45px;">
 
                                             @error('username')
