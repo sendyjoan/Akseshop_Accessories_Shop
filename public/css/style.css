@@ -786,11 +786,13 @@
  .cover-slides h1{
      font-family: 'Poppins', sans-serif;
      font-weight: 500;
-     font-size: 64px;
-     color: #fff;
+     font-size: 80px;
+     color: #ffffff;
 }
+
+
  .cover-slides p{
-     font-size: 18px;
+     font-size: 25px;
      color: #fff;
      padding-bottom: 30px;
 }
@@ -1552,6 +1554,14 @@
 }
  .about-box-main{
      padding: 70px 0px;
+}
+
+.about-box-main  .row p{
+    font-size: 20px;
+    color: #000;
+    font-style: normal;
+
+
 }
  .noo-sh-title{
      font-size: 28px;

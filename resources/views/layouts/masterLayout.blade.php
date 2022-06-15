@@ -36,26 +36,7 @@
 </head>
 
 <body>
-    <!-- Start Main Top -->
-    <div class="main-top">
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                    <div class="right-phone-box">
-                        <p>Call US :- <a href="#"> +62234-7777-8888</a></p>
-                    </div>
-                    <div class="our-link">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-user s_color"></i> My Account</a></li>
-                            <li><a href="#"><i class="fas fa-location-arrow"></i> Our location</a></li>
-                            <li><a href="#"><i class="fas fa-headset"></i> Contact Us</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End Main Top -->
+
 
     <!-- Start Main Top -->
     <header class="main-header">
@@ -75,17 +56,16 @@
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active"><a class="nav-link" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contact-us.html">Contact Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/product">Gallery</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
+                       
                         
                         <li class="nav-item">
-                            <div class="login-box">
+                        <div class="login-box">
 						        <select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
-							        <option>Register Here</option>
+							        <option > Register Here</option>
                                     <option>Sign In</option>
 						        </select>
-                            </div>
                        </li>
 					
                     </ul>
