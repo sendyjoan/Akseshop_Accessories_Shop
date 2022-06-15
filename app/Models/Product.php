@@ -28,4 +28,8 @@ class Product extends Model
     public function order_detail(){
         return $this->hasMany(Order_Detail::class);
     }
+
+    public function add_stock(){
+        return $this->hasMany(Add_Stock::class);
+    }
 }
