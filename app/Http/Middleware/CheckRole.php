@@ -20,7 +20,7 @@ class CheckRole
         $roles = array_slice(func_get_args(), 2);
 
         if (! Auth::user()) {
-            return redirect('/');
+            return redirect('/login');
         }
 
         foreach ($roles as $role) { 
