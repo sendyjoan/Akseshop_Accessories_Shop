@@ -22,13 +22,14 @@ Route::get('/', [LandingPageController::class, 'landingpage']); //Menampilkan La
 Route::get('/about', [LandingPageController::class, 'aboutus']); //Menampilkan Halaman About Us
 Route::get('/product', [LandingPageController::class, 'product']); //Menampilkan Halaman Product
 
- Route::prefix('dashboard')->group(function () {
-     Route::get('/', [AdminController::class, 'index']);
-     Route::get('/customerAdmin', [UserController::class, 'index']);
- });
+Route::prefix('dashboard')->group(function () {
+    Route::resource('user', UserController::class);
+    Route::get('/', [AdminController::class, 'index']);
+    Route::get('/coba', [UserController::class, 'index']);
+    
+});
 
- 
-
+Route::resource('dashboard/pengguna', UserController::class);
 
 Route::get('/detail', function () {
     return view('User/detailProduct');
