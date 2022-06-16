@@ -81,6 +81,16 @@ Route::get('/transaksi', function () {
     return view('admin/transaksi/transaksiIndex');// View List transaksi
 });
 
+
+//route DETAIL
 Route::get('/detailCust', function () {
     return view('admin/customer/detailCustomer');// View Detail Customer
+});
+
+Route::get('/detailBarang', function () {
+    return view('admin/barang/detailBarang');// View Detail Barang
+});
+
+Route::get('/detailTransaksi', function () {
+    return view('admin/transaksi/detailTransaksi');// View Detail Transaksi
 });

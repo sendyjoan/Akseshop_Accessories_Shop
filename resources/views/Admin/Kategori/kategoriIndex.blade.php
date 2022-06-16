@@ -23,7 +23,7 @@
                                     <td><input class="form-check-input" type="checkbox"></td>
                                     <td>01</td>
                                     <td>Gelang</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Show</a>
+                                    <td><a class="btn btn-sm btn-primary" href="">Create</a>
                                     <a class="btn btn-sm btn-primary" href="">Update</a>
                                     <a class="btn btn-sm btn-primary" href="">Delete</a></td>
                                 </tr>
@@ -31,7 +31,7 @@
                                     <td><input class="form-check-input" type="checkbox"></td>
                                     <td>01</td>
                                     <td>Kalung</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Show</a>
+                                    <td><a class="btn btn-sm btn-primary" href="">Creat</a>
                                     <a class="btn btn-sm btn-primary" href="">Update</a>
                                     <a class="btn btn-sm btn-primary" href="">Delete</a></td>
                                 </tr>
@@ -40,7 +40,7 @@
                                     <td><input class="form-check-input" type="checkbox"></td>
                                     <td>01</td>
                                     <td>Cincin</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Show</a>
+                                    <td><a class="btn btn-sm btn-primary" href="">Create</a>
                                     <a class="btn btn-sm btn-primary" href="">Update</a>
                                     <a class="btn btn-sm btn-primary" href="">Delete</a></td>
                                 </tr>
@@ -49,7 +49,7 @@
                                     <td><input class="form-check-input" type="checkbox"></td>
                                     <td>01</td>
                                     <td>Kacamata</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Show</a>
+                                    <td><a class="btn btn-sm btn-primary" href="">Create</a>
                                     <a class="btn btn-sm btn-primary" href="">Update</a>
                                     <a class="btn btn-sm btn-primary" href="">Delete</a></td>
                                 </tr>
@@ -57,7 +57,7 @@
                                     <td><input class="form-check-input" type="checkbox"></td>
                                     <td>01</td>
                                     <td>Jam Tangan</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Show</a>
+                                    <td><a class="btn btn-sm btn-primary" href="">Create</a>
                                     <a class="btn btn-sm btn-primary" href="">Update</a>
                                     <a class="btn btn-sm btn-primary" href="">Delete</a></td>
                                 </tr>
