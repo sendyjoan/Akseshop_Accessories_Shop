@@ -2,35 +2,33 @@
 
 @section('content')
 
-<div class="container-fluid pt-4 px-4"> 
-    <div class="bg-secondary text-center rounded p-4">
-        <div class="d-flex align-items-center justify-content-between mb-4">
-            <h6 class="mb-0">Daftar Barang</h6>
-                <a class="btn btn-success mt-3" href="#">Tambah Barang</a> 
-        </div>
-                <div class="table-responsive">
-                    <table class="table text-start align-middle table-bordered table-hover mb-0">
-                        <thead>
-                            <tr class="text-white">
-                                <th scope="col">Nama Barang</th>
-                                <th scope="col">Stock</th>
-                                <th scope="col">Harga</th>
-                                <th scope="col">Gambar</th>
-                            </tr>
-                            </thead>
+<div class="container pt-4 px-4">
+<div class="row g-4">
+        <div class="col-sm-12 col-xl-6 ">
+            <div class="bg-secondary text-center  rounded p-4">
+                <h6 class="mb-4">Update Barang</h6>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput"  placeholder="Nama Barang">
+                        <label for="floatingInput">Nama Barang</label>
+                    </div>
 
-                            <tbody>
-                                <tr >
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                </tr>
-                            </tbody>
-                    </table>
+                    <div class="form-floating mb-3">
+                        <input type="number" class="form-control" id="floatingNumber"placeholder="Stock">
+                        <label for="floatingNumber">Stock</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingPrice" placeholder="Harga Barang">
+                        <label for="floatingPrice">Harga Barang</label>
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control bg-dark" type="file" id="formFile">
+                    </div>
+                    <a class="btn btn-success mt-3" href="#">Simpan</a> 
+                
             </div>
-                        
-    </div>  
-
-</div>                           
+        </div>
+        </div>
+    
+</div>
 @endsection
