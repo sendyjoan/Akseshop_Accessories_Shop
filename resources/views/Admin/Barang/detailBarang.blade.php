@@ -14,6 +14,8 @@
                             <thead>
                                 <tr class="text-white">
                                     <th>Nama Barang</th>
+                                    <th>Deskripsi</th>
+                                    <th>Kategori</th>
                                     <th>Stock</th>
                                     <th>Harga</th>
                                     <th>Gambar</th>
@@ -21,11 +23,12 @@
                             </thead>
                             <tbody>
                                 <tr>
-                        
+                                    <td>{{$product->namaproduct}}</td>
+                                    <td>{{$product->deskripsi}}</td>
                                     <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
+                                    <td>{{$product->stock}}</td>
+                                    <td>{{$product->harga}}</td>
+                                    <td>{{$product->gambar}}</td>
                                 </tr>
                             </tbody>   
                         </table>
