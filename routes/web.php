@@ -106,3 +106,7 @@ Route::get('/updateBarang', function () {
 Route::get('/updateKategori', function () {
     return view('admin/kategori/updateKategori');// View Update Barang
 });
+
+Route::get('/createBarang', function () {
+    return view('admin/barang/createBarang');// View Tambah Barang
+});
