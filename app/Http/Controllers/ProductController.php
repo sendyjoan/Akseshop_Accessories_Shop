@@ -37,7 +37,19 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        if ($request->file('gambar')) {
+            $image_name = $request->file('gambar')->store('product_img', 'public');
+        }
+
+        Product::create([
+            'NamaProduct' => $request->namabarang,
+            'Deskripsi' => $request->deskripsi,
+            'Stock' => $request->stock,
+            'Harga' => $request->harga,
+            'Gambar' => $image_name,
+        ]);
+
+        return redirect()->route('products.index');
     }
 
     /**
