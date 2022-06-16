@@ -139,44 +139,7 @@
 
                         </div>
 
-                         <div class="row mb-3">
-
-                            <div class="col-md-10">
-                                <input id="address" 
-                                    type="text" 
-                                    class="form-control @error('address') is-invalid @enderror" 
-                                    placeholder="Adress"
-                                    name="address" value="{{ old('address') }}" 
-                                    required autocomplete="address" autofocus
-                                    style="border-radius: 30px; height: 45px;">
-
-                                @error('address')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                         <div class="row mb-3">
-
-                            <div class="col-md-10">
-                                <input id="phone" 
-                                    type="phone" 
-                                    class="form-control @error('phone') is-invalid @enderror" 
-                                    placeholder="+6285xxxxxz"
-                                    name="phone" value="{{ old('phone') }}" 
-                                    required autocomplete="phone" autofocus
-                                    style="border-radius: 30px; height: 45px;">
-
-                                @error('phone')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
+                        
                         <div class="row mb-3">
 
                             <div class="col-md-10">
