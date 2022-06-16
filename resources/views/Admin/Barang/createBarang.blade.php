@@ -7,11 +7,16 @@
         <div class="col-sm-12 col-xl-6 ">
             <div class="bg-secondary text-center  rounded p-4">
                 <h6 class="mb-4">Tambah Barang</h6>
-                <form action="/articles" method="post" enctype="multipart/formdata">
+                <form action="/dashboard/products" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="floatingInput" name="namabarang" placeholder="Nama Barang">
                         <label for="floatingInput">Nama Barang</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" id="floatingInput" name="deskripsi" placeholder="Deskripsi">
+                        <label for="floatingInput">Deskripsi Barang</label>
                     </div>
 
                     <div class="form-floating mb-3">
@@ -26,7 +31,7 @@
                     <div class="mb-3">
                         <input class="form-control bg-dark" type="file" id="formFile" name="gambar" required="required">
                     </div>
-                    <a class="btn btn-success mt-3" type="submit" name="submit">Simpan</a> 
+                    <button class="btn btn-success mt-3" type="submit" name="submit">Simpan</button> 
                 </form>
             </div>
         </div>
