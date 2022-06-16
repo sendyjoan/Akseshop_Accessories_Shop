@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\User;
+use App\Models\Product;
 use Illuminate\Http\Request;
 
-class UserController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +14,9 @@ class UserController extends Controller
      */
     public function index()
     {
-        $users = User::all();
-        // dd($users);
-        return view('admin.customer.customerAdmin', compact('users'));
+        $products = Product::all();
+        // dd($products);
+        return view('Admin/Barang/barangIndex', compact('products'));
     }
 
     /**

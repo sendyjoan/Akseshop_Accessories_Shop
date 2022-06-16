@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\LandingPageController;
 
 /*
@@ -23,13 +24,10 @@ Route::get('/about', [LandingPageController::class, 'aboutus']); //Menampilkan H
 Route::get('/product', [LandingPageController::class, 'product']); //Menampilkan Halaman Product
 
 Route::prefix('dashboard')->group(function () {
-    Route::resource('user', UserController::class);
-    Route::get('/', [AdminController::class, 'index']);
-    Route::get('/coba', [UserController::class, 'index']);
-    
+    Route::resource('users', UserController::class)->middleware('checkRole: 1');
+    Route::resource('products', ProductController::class)->middleware('checkRole: 1');
+    Route::get('/', [AdminController::class, 'index'])->middleware('checkRole: 1');    
 });
-
-Route::resource('dashboard/pengguna', UserController::class);
 
 Route::get('/detail', function () {
     return view('User/detailProduct');
@@ -68,17 +66,17 @@ Route::get('/alert', function () {
 //     return view('Admin/customerAdmin');
 // });
 
-Route::get('/customerAdmin', function () {
-    return view('Admin/customer/customerAdmin');//View List User
-});
+// Route::get('/customerAdmin', function () {
+//     return view('Admin/customer/customerAdmin');//View List User
+// });
 
 Route::get('/kategori', function () {
     return view('Admin/Kategori/kategoriIndex');// View List Kategori
 });
 
-Route::get('/barang', function () {
-    return view('Admin/Barang/barangIndex');// View List Barang
-});
+// Route::get('/barang', function () {
+//     return view('Admin/Barang/barangIndex');// View List Barang
+// });
 Route::get('/transaksi', function () {
     return view('admin/transaksi/transaksiIndex');// View List transaksi
 });
