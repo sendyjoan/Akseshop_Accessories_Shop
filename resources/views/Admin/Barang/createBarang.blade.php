@@ -23,6 +23,14 @@
                         <input type="number" class="form-control" id="floatingNumber" placeholder="Stock" name="stock">
                         <label for="floatingNumber">Stock</label>
                     </div>
+                    
+                    <select class="form-select mb-3" aria-label="Default select example">
+                        <option selected>Kategori</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                    </select>
+
 
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="floatingPrice" placeholder="Harga Barang" name="harga">

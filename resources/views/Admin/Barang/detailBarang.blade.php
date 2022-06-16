@@ -14,7 +14,9 @@
                             <thead>
                                 <tr class="text-white">
                                     <th>Nama Barang</th>
+                                    <th>Deskripsi Barang</th>
                                     <th>Stock</th>
+                                    <th>Kategori</th>
                                     <th>Harga</th>
                                     <th>Gambar</th>
                                 </tr>
