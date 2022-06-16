@@ -39,17 +39,32 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
+        
+        $request->validate([
+            'namabarang' => 'required',
+            'deskripsi' => 'required',
+            'stock' => 'required',
+            'kategori' => 'required',
+            'harga' => 'required',
+            'gambar' => 'required',
+        ]);
+
         if ($request->file('gambar')) {
             $image_name = $request->file('gambar')->store('product_img', 'public');
         }
 
-        Product::create([
-            'NamaProduct' => $request->namabarang,
-            'Deskripsi' => $request->deskripsi,
-            'Stock' => $request->stock,
-            'Harga' => $request->harga,
-            'Gambar' => $image_name,
-        ]);
+        $product = new Product;
+        $product->namaproduct = $request->get('namabarang');
+        $product->deskripsi = $request->get('deskripsi');
+        $product->stock = $request->get('stock');
+        $product->harga = $request->get('harga');
+        $product->gambar = $image_name;
+        
+        $kategori = new Category;
+        $kategori->idkategori = $request->get('kategori');
+
+        $product->category_id()->associate($kategori);
+        $product->save();
 
         return redirect()->route('products.index');
     }
@@ -62,7 +77,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        $product = Product::where('idproduct', $id)->first();
+        $product = Product::with('category_id')->where('idproduct', $id)->first();
         return view('admin.barang.detailBarang', compact('product'));
     }
 
