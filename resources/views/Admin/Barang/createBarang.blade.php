@@ -24,11 +24,10 @@
                         <label for="floatingNumber">Stock</label>
                     </div>
                     
-                    <select class="form-select mb-3" aria-label="Default select example">
-                        <option selected>Kategori</option>
-                        <option value="1">One</option>
-                        <option value="2">Two</option>
-                        <option value="3">Three</option>
+                    <select name="kategori" class="form-select mb-3" aria-label="Default select example">
+                        @foreach ($categories as $category)
+                            <option value="{{$category->idkategori}}">{{ $category->namakategori}}</option>
+                        @endforeach
                     </select>
 
 
