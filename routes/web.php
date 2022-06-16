@@ -32,7 +32,7 @@ Route::prefix('dashboard')->group(function () {
 Route::resource('dashboard/pengguna', UserController::class);
 
 Route::get('/detail', function () {
-    return view('User/detailProduct');// Show Detail Product
+    return view('User/detailProduct');
 });
 
 Route::get('/editProfile', function () {
@@ -78,4 +78,7 @@ Route::get('/kategori', function () {
 
 Route::get('/barang', function () {
     return view('Admin/Barang/barangIndex');// View List Barang
+});
+Route::get('/transaksi', function () {
+    return view('admin/transaksi/transaksiIndex');// View List transaksi
 });

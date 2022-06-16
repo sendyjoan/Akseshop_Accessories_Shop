@@ -37,7 +37,7 @@
                             <img src="images/gallery-img-01.jpg" class="img-fluid" alt="Image">
                             <div class="mask-icon">
                                 <ul>
-                                    <li><a href="/detailProduct" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
+                                    <li><a href="/detail" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
                                     
                                 </ul>
                                 <a class="cart" href="#">Add to Cart</a>

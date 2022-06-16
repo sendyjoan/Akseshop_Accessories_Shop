@@ -61,8 +61,9 @@
                         
                         <li class="nav-item">
 						        <select id="basic" class="selectpicker show-tick form-control" data-placeholder="Sign In">
-							        <option > Register Here</option>
-                                    <option>Sign In</option>
+							    <li class="nav-item"><a class="nav-link" href="/login">Login</a></li>
+                        
+                                    <option href="/login">Sign In</option>
 						        </select>
                        </li>
 					
