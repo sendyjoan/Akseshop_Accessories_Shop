@@ -253,6 +253,7 @@
 
 .bootstrap-datetimepicker-widget .table * {
     border-bottom-width: 0px;
+    text-align: center;
 }
 
 .bootstrap-datetimepicker-widget .table th {
