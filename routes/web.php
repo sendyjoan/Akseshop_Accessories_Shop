@@ -82,3 +82,7 @@ Route::get('/alert', function () {
 Route::get('/transaksi', function () {
     return view('admin/transaksi/transaksiIndex');// View List transaksi
 });
+
+Route::get('/detailCust', function () {
+    return view('admin/customer/detailCustomer');// View Detail Customer
+});
