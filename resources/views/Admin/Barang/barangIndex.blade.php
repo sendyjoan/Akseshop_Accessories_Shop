@@ -25,9 +25,13 @@
                                         <td>{{ $product->namaproduct}}</td>
                                         <td>{{ $product->stock}}</td>
                                         <td>{{ $product->harga}}</td>
-                                        <td><a class="btn btn-sm btn-primary" href="">Detail</a>
+                                        <td><a class="btn btn-sm btn-info" href="{{ route('products.show', $product->idproduct)}}">Detail</a>
                                         <a class="btn btn-sm btn-primary" href="">Update</a>
-                                        <a class="btn btn-sm btn-primary" href="">Delete</a></td>
+                                        <form action="{{ route('products.destroy', ['product'=>$product->idproduct])}}" method="post">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button class="btn btn-sm btn-danger" type="submit">Delete</button></td>
+                                        </form>
                                     </tr>
                                 @endforeach
                             </tbody>
