@@ -23,13 +23,9 @@ Route::get('/about', [LandingPageController::class, 'aboutus']); //Menampilkan H
 Route::get('/product', [LandingPageController::class, 'product']); //Menampilkan Halaman Product
 
 Route::prefix('dashboard')->group(function () {
-    Route::resource('user', UserController::class);
-    Route::get('/', [AdminController::class, 'index']);
-    Route::get('/coba', [UserController::class, 'index']);
-    
+    Route::resource('user', UserController::class)->middleware('checkRole: 1');
+    Route::get('/', [AdminController::class, 'index'])->middleware('checkRole: 1');    
 });
-
-Route::resource('dashboard/pengguna', UserController::class);
 
 Route::get('/detail', function () {
     return view('User/detailProduct');
