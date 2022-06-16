@@ -17,7 +17,6 @@
                                     <th>Deskripsi</th>
                                     <th>Kategori</th>
                                     <th>Stock</th>
-                                    <th>Kategori</th>
                                     <th>Harga</th>
                                     <th>Gambar</th>
                                 </tr>
@@ -26,7 +25,7 @@
                                 <tr>
                                     <td>{{$product->namaproduct}}</td>
                                     <td>{{$product->deskripsi}}</td>
-                                    <td></td>
+                                    <td>{{$product->category_id->namakategori}}</td>
                                     <td>{{$product->stock}}</td>
                                     <td>{{$product->harga}}</td>
                                     <td>{{$product->gambar}}</td>
