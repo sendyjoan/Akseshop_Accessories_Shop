@@ -30,10 +30,10 @@
     <!-- <link rel="stylesheet"  href="admin/style.css" > -->
 
      <!-- Customized Bootstrap Stylesheet -->
-     <link href="admin/bootstrap.min.css" rel="stylesheet">
+     <link href="{{ asset('/admin/bootstrap.min.css') }}" rel="stylesheet">
 
 <!-- Template Stylesheet -->
-<link href="admin/style.css" rel="stylesheet">
+<link href="{{ asset('/admin/style.css') }}" rel="stylesheet">
 </head>
 
 
