@@ -12,55 +12,19 @@
                         <table class="table text-start align-middle table-bordered table-hover mb-0">
                             <thead>
                                 <tr class="text-white">
-                                    <th scope="col"><input class="form-check-input" type="checkbox"></th>
-                                    <th scope="col">ID</th>
                                     <th scope="col">Kategori</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($categories as $category)
                                 <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>01</td>
-                                    <td>Gelang</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Create</a>
+                                    <td>{{ $category->namakategori }}</td>
+                                    <td>
                                     <a class="btn btn-sm btn-primary" href="">Update</a>
                                     <a class="btn btn-sm btn-primary" href="">Delete</a></td>
                                 </tr>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>01</td>
-                                    <td>Kalung</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Creat</a>
-                                    <a class="btn btn-sm btn-primary" href="">Update</a>
-                                    <a class="btn btn-sm btn-primary" href="">Delete</a></td>
-                                </tr>
-                                <tr>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>01</td>
-                                    <td>Cincin</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Create</a>
-                                    <a class="btn btn-sm btn-primary" href="">Update</a>
-                                    <a class="btn btn-sm btn-primary" href="">Delete</a></td>
-                                </tr>
-                                <tr>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>01</td>
-                                    <td>Kacamata</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Create</a>
-                                    <a class="btn btn-sm btn-primary" href="">Update</a>
-                                    <a class="btn btn-sm btn-primary" href="">Delete</a></td>
-                                </tr>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>01</td>
-                                    <td>Jam Tangan</td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Create</a>
-                                    <a class="btn btn-sm btn-primary" href="">Update</a>
-                                    <a class="btn btn-sm btn-primary" href="">Delete</a></td>
-                                </tr>
+                                @endforeach
                             </tbody>
                         </table>
                     </div>
