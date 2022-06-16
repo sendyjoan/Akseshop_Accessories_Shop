@@ -17,6 +17,7 @@
                                     <th>Deskripsi</th>
                                     <th>Kategori</th>
                                     <th>Stock</th>
+                                    <th>Kategori</th>
                                     <th>Harga</th>
                                     <th>Gambar</th>
                                 </tr>
