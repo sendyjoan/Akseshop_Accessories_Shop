@@ -62,7 +62,8 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        //
+        $product = Product::where('idproduct', $id)->first();
+        return view('admin.barang.detailBarang', compact('product'));
     }
 
     /**
@@ -96,6 +97,7 @@ class ProductController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Product::where('idproduct', $id)->delete();
+        return redirect()->route('products.index');
     }
 }
