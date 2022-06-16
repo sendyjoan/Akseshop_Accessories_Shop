@@ -13,14 +13,15 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
-
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
-    protected $fillable = [
+    protected $table = 'users';
+    protected $primaryKey = 'id'; 
+
+     protected $fillable = [
         'Name',
         'Email',
         'Password',
