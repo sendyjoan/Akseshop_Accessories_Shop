@@ -11,6 +11,7 @@
                         <input type="text" class="form-control" id="floatingInput"  placeholder="Nama Barang">
                         <label for="floatingInput">Nama Barang</label>
                     </div>
+                    
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="floatingNumber"placeholder="Stock">
                         <label for="floatingNumber">Deskripsi Barang</label>
