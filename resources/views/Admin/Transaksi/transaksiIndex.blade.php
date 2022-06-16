@@ -15,7 +15,8 @@
                                 <tr class="text-white">
                                     <th scope="col"><input class="form-check-input" type="checkbox"></th>
                                     <th scope="col">ID transaksi</th>
-                                    <th scope="col">Total Transaksi</th>
+                                    <th scope="col">ID User</th>
+                                    <th scope="col">Total Order</th>
                                     <th scope="col">Bukti Pembayaran</th>
                                     <th scope="col">Action</th>
                                     
@@ -26,10 +27,9 @@
                                 <tr>
                                     <td><input class="form-check-input" type="checkbox"></td>
                                     <td>01</td>
-                                    <td>100000</td>
-                                    <td lino> </td>
-                                    <td>10</td>
-                                    <td>15000</td>
+                                    <td>001</td>
+                                    <td> 1000000</td>
+                                    <td></td>
                                     <td><a class="btn btn-sm btn-primary" href="">Show</a>
                                     <a class="btn btn-sm btn-primary" href="">Update</a>
                                     <a class="btn btn-sm btn-primary" href="">Delete</a></td>
@@ -38,10 +38,9 @@
                                 <tr>
                                     <td><input class="form-check-input" type="checkbox"></td>
                                     <td>01</td>
-                                    <td>Jam Tangan Rolex</td>
-                                    <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci a ea tenetur porro fugit consequuntur numquam quam quos. </td>
-                                    <td>10</td>
-                                    <td>15000</td>
+                                    <td>001</td>
+                                    <td> 1000000</td>
+                                    <td></td>
                                     <td><a class="btn btn-sm btn-primary" href="">Show</a>
                                     <a class="btn btn-sm btn-primary" href="">Update</a>
                                     <a class="btn btn-sm btn-primary" href="">Delete</a></td>

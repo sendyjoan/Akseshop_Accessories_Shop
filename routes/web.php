@@ -22,13 +22,16 @@ Route::get('/', [LandingPageController::class, 'landingpage']); //Menampilkan La
 Route::get('/about', [LandingPageController::class, 'aboutus']); //Menampilkan Halaman About Us
 Route::get('/product', [LandingPageController::class, 'product']); //Menampilkan Halaman Product
 
-Route::prefix('dashboard')->group(function () {
-    Route::get('/', [AdminController::class, 'index']);
-    Route::get('/user', [UserController::class, 'index']);
-});
+ Route::prefix('dashboard')->group(function () {
+     Route::get('/', [AdminController::class, 'index']);
+     Route::get('/customerAdmin', [UserController::class, 'index']);
+ });
+
+ 
+
 
 Route::get('/detail', function () {
-    return view('User/detailProduct');// Show Detail Product
+    return view('User/detailProduct');
 });
 
 Route::get('/editProfile', function () {
@@ -74,4 +77,7 @@ Route::get('/kategori', function () {
 
 Route::get('/barang', function () {
     return view('Admin/Barang/barangIndex');// View List Barang
+});
+Route::get('/transaksi', function () {
+    return view('admin/transaksi/transaksiIndex');// View List transaksi
 });

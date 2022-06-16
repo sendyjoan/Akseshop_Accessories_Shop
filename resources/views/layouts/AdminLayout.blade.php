@@ -40,15 +40,6 @@
 <body>
     
 <div class="container-fluid position-relative d-flex p-0">
-        <!-- Spinner Start -->
-        <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
-                <span class="sr-only">Loading...</span>
-            </div>
-        </div>
-        <!-- Spinner End -->
-
-
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-secondary navbar-dark">
@@ -66,7 +57,7 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="/indexAdmin" class="nav-item nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="/indexAdmin" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
                     <a href="/customerAdmin" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Daftar Pelanggan</a>
                     <a href="#" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Daftar Transaksi</a>
                     <a href="#" class="nav-item nav-link"><i class="fa fa-table me-2"></i> Barang</a>
