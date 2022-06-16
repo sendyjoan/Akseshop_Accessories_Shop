@@ -1,28 +1,6 @@
 @extends('layouts.AdminLayout') 
 @section('content') 
- <!-- <div class="container mt-5"> 
-    <div class="row justify-content-center align-items-center"> 
-        <div class="card" style="width: 24rem;"> 
-            <div class="card-header"> 
-            Detail Customer
-            </div> 
-            <div class="card-body"> 
-                <ul class="list-group list-group-flush"> 
-                    <li class="list-group-item"><b>ID: </b></li> 
-                    <li class="list-group-item"><b>Nama Customer: </b></li>
-                    <li class="list-group-item"><b>Email: </b>}</li>
-                    <li class="list-group-item"><b>Alamat: </b></li>
-                    <li class="list-group-item"><b>Nomor Handphone: </b></li>
-                </ul> 
-            </div> 
-            <a class="btn btn-success mt-3" href="#">Kembali</a> 
- 
-        </div> 
-    </div> 
-</div>
 
-
-</div> -->
 
 <div class="container  pt-4 px-4">
 <div class="bg-secondary text-center rounded p-4">
