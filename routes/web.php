@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ProductController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LandingPageController;
 
 /*
@@ -26,6 +27,7 @@ Route::get('/product', [LandingPageController::class, 'product']); //Menampilkan
 Route::prefix('dashboard')->group(function () {
     Route::resource('users', UserController::class)->middleware('checkRole: 1');
     Route::resource('products', ProductController::class)->middleware('checkRole: 1');
+    Route::resource('categories', CategoryController::class)->middleware('checkRole: 1');
     Route::get('/', [AdminController::class, 'index'])->middleware('checkRole: 1');    
 });
 
@@ -70,9 +72,9 @@ Route::get('/alert', function () {
 //     return view('Admin/customer/customerAdmin');//View List User
 // });
 
-Route::get('/kategori', function () {
-    return view('Admin/Kategori/kategoriIndex');// View List Kategori
-});
+// Route::get('/kategori', function () {
+//     return view('Admin/Kategori/kategoriIndex');// View List Kategori
+// });
 
 // Route::get('/barang', function () {
 //     return view('Admin/Barang/barangIndex');// View List Barang
