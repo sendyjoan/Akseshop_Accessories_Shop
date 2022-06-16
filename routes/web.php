@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\LandingPageController;
 
 /*
@@ -24,6 +25,7 @@ Route::get('/product', [LandingPageController::class, 'product']); //Menampilkan
 
 Route::prefix('dashboard')->group(function () {
     Route::resource('user', UserController::class)->middleware('checkRole: 1');
+    Route::resource('product', ProductController::class)->middleware('checkRole: 1');
     Route::get('/', [AdminController::class, 'index'])->middleware('checkRole: 1');    
 });
 
@@ -64,17 +66,17 @@ Route::get('/alert', function () {
 //     return view('Admin/customerAdmin');
 // });
 
-Route::get('/customerAdmin', function () {
-    return view('Admin/customer/customerAdmin');//View List User
-});
+// Route::get('/customerAdmin', function () {
+//     return view('Admin/customer/customerAdmin');//View List User
+// });
 
 Route::get('/kategori', function () {
     return view('Admin/Kategori/kategoriIndex');// View List Kategori
 });
 
-Route::get('/barang', function () {
-    return view('Admin/Barang/barangIndex');// View List Barang
-});
+// Route::get('/barang', function () {
+//     return view('Admin/Barang/barangIndex');// View List Barang
+// });
 Route::get('/transaksi', function () {
     return view('admin/transaksi/transaksiIndex');// View List transaksi
 });
