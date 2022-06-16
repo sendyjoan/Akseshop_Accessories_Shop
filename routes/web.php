@@ -96,3 +96,9 @@ Route::get('/detailBarang', function () {
 Route::get('/detailTransaksi', function () {
     return view('admin/transaksi/detailTransaksi');// View Detail Transaksi
 });
+
+
+//Route UPDATE
+Route::get('/updateBarang', function () {
+    return view('admin/barang/updateBarang');// View Update Barang
+});

@@ -6,8 +6,8 @@
 <div class="container-fluid pt-4 px-4">
                 <div class="bg-secondary text-center rounded p-4">
                     <div class="d-flex align-items-center justify-content-between mb-4">
-                        <h6 class="mb-0">Daftar Pelanggan</h6>
-                        <a href="#">Cetak Report</a>
+                        <h6 class="mb-0">Daftar Barang</h6>
+                        <a class="btn btn-success mt-3" href="#">Tambah Barang</a> 
                     </div>
                     <div class="table-responsive">
                         <table class="table text-start align-middle table-bordered table-hover mb-0">
