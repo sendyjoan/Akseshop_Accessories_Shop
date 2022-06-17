@@ -16,7 +16,7 @@ class CategoryController extends Controller
     {
         $categories = Category::all();
         // dd($categories);
-        return view('Admin/Kategori/kategoriIndex', compact('categories'));
+        return view('Admin/Kategori/kategoriIndex', compact('categories'),['title' => ' List Kategori', 'active' => 'kategori']);
     }
 
     /**
@@ -74,7 +74,7 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.kategori.updateKategori');
     }
 
     /**
@@ -90,17 +90,13 @@ class CategoryController extends Controller
             'namakategori' => 'required',
         ]);
 
-        $categories = Category::where('idkategori', $id)->first();
+        $categories = new Category;
         $categories->namakategori = $request->get('namakategori');
-        // $product->save();
+        $categories->save();
+
         
-        $kategori = new Category;
-        $kategori->idkategori = $request->get('kategori');
 
-        $product->category_id()->associate($kategori);
-        $product->save();
-
-        return redirect()->route('categories.index');
+        return redirect()->route('categories.index',['title' => ' Update Kategori', 'active' => 'kategori']);
     }
 
     /**
@@ -112,6 +108,6 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         Category::where('idkategori', $id)->delete();
-        return redirect()->route('categories.index');
+        return redirect()->route('categories.index',['title' => ' Delete Kategori', 'active' => 'kategori']);
     }
 }

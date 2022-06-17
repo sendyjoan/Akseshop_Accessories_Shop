@@ -23,7 +23,7 @@
                                 <tr>
                                     <td>{{ $category->namakategori }}</td>
                                     <td>
-                                    <button class="btn btn-sm btn-primary" href="">Update</button>
+                                    <!-- <button class="btn btn-sm btn-primary" href="{{ route('categories.update')}}">Update</button> -->
 
                                  <form action="{{ route('categories.destroy', ['category'=>$category->idkategori])}}" method="post">
                                     @csrf
