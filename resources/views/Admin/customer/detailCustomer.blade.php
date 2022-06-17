@@ -23,6 +23,8 @@
                                 </tr>
                             </thead>
                             <tbody>
+                            <form action="" method="post">
+                            @csrf
                                 <tr>
                         
                                     <td></td>
@@ -32,12 +34,12 @@
                                     <td></td>
                                 </tr>
 
-                              
+                                </form>
                             </tbody>
 
                            
                         </table>
-                        <a class="btn btn-success mt-3" href="#">Kembali</a> 
+                        <button class="btn btn-success mt-3" href="#">Kembali</button> 
                 </div>
                 </div>
 </div>

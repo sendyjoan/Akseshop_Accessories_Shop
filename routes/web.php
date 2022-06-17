@@ -72,9 +72,9 @@ Route::get('/alert', function () {
 //     return view('Admin/customer/customerAdmin');//View List User
 // });
 
-// Route::get('/kategori', function () {
-//     return view('Admin/Kategori/kategoriIndex');// View List Kategori
-// });
+ Route::get('/kategori', function () {
+     return view('Admin/Kategori/kategoriIndex');// View List Kategori
+ });
 
 // Route::get('/barang', function () {
 //     return view('Admin/Barang/barangIndex');// View List Barang
