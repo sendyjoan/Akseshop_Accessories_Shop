@@ -28,7 +28,7 @@ Route::prefix('dashboard')->group(function () {
     Route::resource('users', UserController::class)->middleware('checkRole: 1');
     Route::resource('products', ProductController::class)->middleware('checkRole: 1');
     Route::resource('categories', CategoryController::class)->middleware('checkRole: 1');
-    Route::get('/', [AdminController::class, 'index'])->middleware('checkRole: 1');    
+    Route::resource('/', AdminController::class)->middleware('checkRole: 1');    
 });
 
 Route::get('/detail', function () {

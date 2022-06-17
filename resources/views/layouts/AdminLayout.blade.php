@@ -57,8 +57,8 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="#" class="nav-item nav-link {{ $active === 'dashboard' ? 'active' : ''}}"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <a href="/customerAdmin" class="nav-item nav-link {{ $active === 'user' ? 'active' : ''}}"><i class="fa fa-th me-2"></i>Daftar Pelanggan</a>
+                    <a href="{{ route('index')}}" class="nav-item nav-link {{ $active === 'dashboard' ? 'active' : ''}}"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="{{ route('users.index')}}" class="nav-item nav-link {{ $active === 'user' ? 'active' : ''}}"><i class="fa fa-th me-2"></i>Daftar Pelanggan</a>
                     <a href="#" class="nav-item nav-link {{ $active === 'transaksi' ? 'active' : ''}}"><i class="fa fa-keyboard me-2"></i>Daftar Transaksi</a>
                     <a href="{{ route('products.index')}}" class="nav-item nav-link {{ $active === 'barang' ? 'active' : ''}}"><i class="fa fa-table me-2"></i>Daftar Barang</a>
                     <a href="#" class="nav-item nav-link {{ $active === 'kategori' ? 'active' : ''}}"><i class="fa fa-table me-2"></i> Kategori Barang</a>
@@ -106,7 +106,7 @@
                 <div class="bg-secondary rounded-top p-4">
                     <div class="row">
                         <div class="col-12 col-sm-6 text-center text-sm-start">
-                            &copy; <a href="#">Your Site Name</a>, All Right Reserved. 
+                            &copy; <a href="{{ route('index')}}">HanSen Developer</a>, All Right Reserved. 
                         </div>
                         <div class="col-12 col-sm-6 text-center text-sm-end">
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
