@@ -28,7 +28,7 @@
                                     <td>{{$product->category_id->namakategori}}</td>
                                     <td>{{$product->stock}}</td>
                                     <td>{{$product->harga}}</td>
-                                    <td>{{$product->gambar}}</td>
+                                    <td><img width="150px" src="{{asset('storage/'.$product->gambar)}}"></td>
                                 </tr>
                             </tbody>   
                         </table>
