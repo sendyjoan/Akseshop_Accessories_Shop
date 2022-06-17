@@ -58,7 +58,7 @@
                 </div>
                 <div class="navbar-nav w-100">
                     <a href="#" class="nav-item nav-link {{ $active === 'dashboard' ? 'active' : ''}}"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <a href="/customerAdmin" class="nav-item nav-link {{ $active === 'customer' ? 'active' : ''}}"><i class="fa fa-th me-2"></i>Daftar Pelanggan</a>
+                    <a href="/customerAdmin" class="nav-item nav-link {{ $active === 'user' ? 'active' : ''}}"><i class="fa fa-th me-2"></i>Daftar Pelanggan</a>
                     <a href="#" class="nav-item nav-link {{ $active === 'transaksi' ? 'active' : ''}}"><i class="fa fa-keyboard me-2"></i>Daftar Transaksi</a>
                     <a href="{{ route('products.index')}}" class="nav-item nav-link {{ $active === 'barang' ? 'active' : ''}}"><i class="fa fa-table me-2"></i>Daftar Barang</a>
                     <a href="#" class="nav-item nav-link {{ $active === 'kategori' ? 'active' : ''}}"><i class="fa fa-table me-2"></i> Kategori Barang</a>
