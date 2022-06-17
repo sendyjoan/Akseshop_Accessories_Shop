@@ -122,7 +122,7 @@ class ProductController extends Controller
         $product->stock = $request->get('stock');
         $product->harga = $request->get('harga');
         $product->gambar = $image_name;
-        $product->save();
+        // $product->save();
         
         $kategori = new Category;
         $kategori->idkategori = $request->get('kategori');

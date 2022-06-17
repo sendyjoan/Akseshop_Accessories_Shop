@@ -6,8 +6,9 @@
 <div class="row g-4">
         <div class="col-sm-12 col-xl-6 ">
             <div class="bg-secondary text-center  rounded p-4">
-                <form action="/dashboard/products" method="post" enctype="multipart/form-data">
+                <form action="{{ route('products.update', $product->idproduct)}}" method="post" enctype="multipart/form-data">
                     @csrf
+                    @method('PUT')
                     <h6 class="mb-4">Update Barang</h6>
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" name="namabarang" id="floatingInput"  placeholder="Nama Barang" value="{{ $product->namaproduct}}">
