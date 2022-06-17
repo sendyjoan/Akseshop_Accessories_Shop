@@ -28,6 +28,8 @@
                                         <td>{{ $user->email }}</td>
                                         <td>{{ $user->telephone }}</td>
                                         <td><button class="btn btn-sm btn-primary" href="">Detail</button>
+                                        <button class="btn btn-sm btn-primary" href="">Create</button>
+                                        <button class="btn btn-sm btn-primary" href="">Update</button>
                                         <button class="btn btn-sm btn-primary" href="">Delete</button></td>
                                     </tr>
 

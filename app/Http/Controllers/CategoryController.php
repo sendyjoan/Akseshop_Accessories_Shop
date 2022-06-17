@@ -26,8 +26,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        $categories = Category::all();
-        return view('admin.kategori.createKategori',['categoris' => $categoris]);
+      
+        return view('admin/kategori/createKategori',['title' => 'List Kategori', 'active' => 'kategori']);
     }
 
 
@@ -39,7 +39,20 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+         
+        $request->validate([
+            'kategori' => 'required',
+        ]);
+
+
+        $categories = new Category;
+        $categories->namakategori = $request->get('kategori');
+        $categories->save();
+
+        //  Category::create($request->all());
+    
+
+        return redirect()->route('categories.index',['title' => ' Create Kategori', 'active' => 'kategori']);
     }
 
     /**
@@ -73,7 +86,21 @@ class CategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'namakategori' => 'required',
+        ]);
+
+        $categories = Category::where('idkategori', $id)->first();
+        $categories->namakategori = $request->get('namakategori');
+        // $product->save();
+        
+        $kategori = new Category;
+        $kategori->idkategori = $request->get('kategori');
+
+        $product->category_id()->associate($kategori);
+        $product->save();
+
+        return redirect()->route('categories.index');
     }
 
     /**
@@ -84,6 +111,7 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Category::where('idkategori', $id)->delete();
+        return redirect()->route('categories.index');
     }
 }
