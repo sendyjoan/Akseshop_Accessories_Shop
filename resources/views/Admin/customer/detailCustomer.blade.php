@@ -34,7 +34,7 @@
                                     <td>{{ $user->telephone}}</td>
                                     <td>{{ $user->gambar}}</td>
                                     <td>{{ $user->gender_id}}</td>
-                                    <td>{{ $user->role_id->Role}}</td>
+                                    <td>{{ $user->role_id}}</td>
                                     <td>{{ $user->created_at}}</td>
                                     <td>{{ $user->updated_at}}</td>
                                 </tr>
