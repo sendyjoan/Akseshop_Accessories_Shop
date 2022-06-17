@@ -21,19 +21,18 @@
                             </thead>
                             <tbody>
                                 @foreach ($users as $user)
-                                <form action="" method="post">
-                                 @csrf
+                                    @csrf
                                     <tr>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
                                         <td>{{ $user->telephone }}</td>
-                                        <td><button class="btn btn-sm btn-primary" href="">Detail</button>
-                                        <button class="btn btn-sm btn-primary" href="">Create</button>
-                                        <button class="btn btn-sm btn-primary" href="">Update</button>
-                                        <button class="btn btn-sm btn-primary" href="">Delete</button></td>
+                                        <td><a class="btn btn-sm btn-primary" href="{{ route('users.show', $user->id)}}">Detail</a>
+                                            <form action="{{ route('users.destroy', $user->id)}}" method="post">
+                                                @csrf
+                                                @method('DELETE')
+                                                <button class="btn btn-sm btn-danger" type="submit">Delete</button></td>
+                                            </form>
                                     </tr>
-
-                                </form>
                                 @endforeach
                             </tbody>
                         </table>

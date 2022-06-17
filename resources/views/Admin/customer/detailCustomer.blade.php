@@ -18,8 +18,6 @@
                                     <th>Alamat</th>
                                     <th>Telephone</th>
                                     <th>Gambar</th>
-                                    <th>Gender</th>
-                                    <th>Role</th>
                                     <th>Create At</th>
                                     <th>Update At</th>
                                 </tr>
@@ -33,8 +31,6 @@
                                     <td>{{ $user->alamat}}</td>
                                     <td>{{ $user->telephone}}</td>
                                     <td>{{ $user->gambar}}</td>
-                                    <td>{{ $user->gender_id}}</td>
-                                    <td>{{ $user->role_id}}</td>
                                     <td>{{ $user->created_at}}</td>
                                     <td>{{ $user->updated_at}}</td>
                                 </tr>
@@ -44,7 +40,7 @@
 
                            
                         </table>
-                        <button class="btn btn-success mt-3" href="#">Kembali</button> 
+                        <a class="btn btn-success mt-3" href="{{ route('users.index')}}">Kembali</a> 
                 </div>
                 </div>
 </div>
