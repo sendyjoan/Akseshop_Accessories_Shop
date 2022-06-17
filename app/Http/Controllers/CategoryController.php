@@ -26,8 +26,10 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        $categories = Category::all();
+        return view('admin.kategori.createKategori',['categoris' => $categoris]);
     }
+
 
     /**
      * Store a newly created resource in storage.

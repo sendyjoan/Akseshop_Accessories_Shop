@@ -21,13 +21,17 @@
                             </thead>
                             <tbody>
                                 @foreach ($users as $user)
+                                <form action="" method="post">
+                                 @csrf
                                     <tr>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
                                         <td>{{ $user->telephone }}</td>
-                                        <td><a class="btn btn-sm btn-primary" href="">Detail</a>
-                                        <a class="btn btn-sm btn-primary" href="">Delete</a></td>
+                                        <td><button class="btn btn-sm btn-primary" href="">Detail</button>
+                                        <button class="btn btn-sm btn-primary" href="">Delete</button></td>
                                     </tr>
+
+                                </form>
                                 @endforeach
                             </tbody>
                         </table>
