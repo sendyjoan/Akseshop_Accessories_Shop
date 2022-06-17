@@ -16,7 +16,7 @@ class UserController extends Controller
     {
         $users = User::all();
         // dd($users);
-        return view('admin.customer.customerAdmin', compact('users'));
+        return view('admin.customer.customerAdmin', compact('users'), ['title' => 'List Users', 'active' => 'user']);
     }
 
     /**
@@ -48,7 +48,8 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::with('gender_id', 'role_id')->where('id', $id)->first();
+        return view('admin/customer/detailCustomer', compact('user'), ['title' => 'Detail User', 'active' => 'user']);
     }
 
     /**
