@@ -23,7 +23,7 @@
                                 <tr>
                                     <td>{{ $category->namakategori }}</td>
                                     <td>
-                                    <button class="btn btn-sm btn-primary" href="">Update</button>
+                                    <button class="btn btn-sm btn-info" href="{{ route('categories.edit', $category->idkategori)}}">Update</button>
 
                                  <form action="{{ route('categories.destroy', ['category'=>$category->idkategori])}}" method="post">
                                     @csrf
@@ -40,5 +40,3 @@
             <!-- Recent Sales End -->
 
 @endsection
-
-
