@@ -104,9 +104,15 @@ Route::get('/updateBarang', function () {
 });
 
 Route::get('/updateKategori', function () {
-    return view('admin/kategori/updateKategori');// View Update Barang
+    return view('admin/kategori/updateKategori');// View Update kategori
 });
 
 // Route::get('/createBarang', function () {
 //     return view('admin/barang/createBarang');// View Tambah Barang
 // });
+
+
+//Route Create
+Route::get('/createKategori', function () {
+    return view('admin/kategori/createKategori');// View create kategori
+});
