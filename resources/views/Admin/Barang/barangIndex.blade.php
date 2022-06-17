@@ -26,7 +26,7 @@
                                         <td>{{ $product->stock}}</td>
                                         <td>{{ $product->harga}}</td>
                                         <td><a class="btn btn-sm btn-info" href="{{ route('products.show', $product->idproduct)}}">Detail</a>
-                                        <a class="btn btn-sm btn-primary" href="">Update</a>
+                                        <a class="btn btn-sm btn-primary" href="{{ route('products.edit', $product->idproduct)}}">Update</a>
                                         <form action="{{ route('products.destroy', ['product'=>$product->idproduct])}}" method="post">
                                             @csrf
                                             @method('DELETE')
