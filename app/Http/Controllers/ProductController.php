@@ -91,7 +91,7 @@ class ProductController extends Controller
     {
         $product = Product::with('category_id')->where('idproduct', $id)->first();
         $categori = Category::all();
-        return view('admin/barang/updateBarang', compact('product', 'categori'), ['title' => 'Edit Product', 'active' => 'barang']);
+        return view('admin/barang/updateBarang', compact('product'), ['title' => 'Edit Product', 'active' => 'barang']);
     }
 
     /**

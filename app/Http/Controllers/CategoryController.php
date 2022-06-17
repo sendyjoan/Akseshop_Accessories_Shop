@@ -52,7 +52,7 @@ class CategoryController extends Controller
         //  Category::create($request->all());
     
 
-        return redirect()->route('categories.index',['title' => ' Create Kategori', 'active' => 'kategori']);
+        return redirect()->route('categories.index',   ['title' => ' Create Kategori', 'active' => 'kategori']);
     }
 
     /**
@@ -74,8 +74,8 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        $kategori = Category::where('idkategori', $id)->first();
-        return view('admin.kategori.updateKategori', ['title' => ' Update Kategori', 'active' => 'kategori']);
+        $categories=Category::where('idkategori', $id)->first();
+        return view('admin.kategori.updateKategori', compact('categories'),['title' => ' Update Kategori', 'active' => 'kategori']);
     }
 
     /**
@@ -91,7 +91,7 @@ class CategoryController extends Controller
             'namakategori' => 'required',
         ]);
 
-        $categories = new Category;
+        $categories = Category::where('idkategori', $id)->first();
         $categories->namakategori = $request->get('namakategori');
         $categories->save();
 
