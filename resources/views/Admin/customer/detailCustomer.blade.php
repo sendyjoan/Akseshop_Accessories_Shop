@@ -9,29 +9,34 @@
                     </div>
 
 <div class="container">
-
-
                 <div class="table-responsive">
                         <table class="table text-start align-middle table-bordered table-hover mb-0">
                             <thead>
                                 <tr class="text-white">
-                                    <th>ID</th>
-                                    <th>Nama Customer</th>
-                                    <th>Nomor Handphone</th>
-                                    <th>Alamat</th>
+                                    <th>Nama</th>
                                     <th>Email</th>
+                                    <th>Alamat</th>
+                                    <th>Telephone</th>
+                                    <th>Gambar</th>
+                                    <th>Gender</th>
+                                    <th>Role</th>
+                                    <th>Create At</th>
+                                    <th>Update At</th>
                                 </tr>
                             </thead>
                             <tbody>
                             <form action="" method="post">
                             @csrf
                                 <tr>
-                        
-                                    <td></td>
-                                    <td></td>
-                                    <td></td>
-                                    <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In, quis aut architecto consequatur earum officiis quibusdam eaque magnam. Libero animi consectetur id quibusdam illo laboriosam quas odit et distinctio. Aliquid sunt corporis expedita illum. Quaerat adipisci, laudantium qui aut provident et incidunt voluptas consequatur vero sed est, possimus quisquam nesciunt hic veritatis non sapiente placeat dignissimos nemo ratione sit ipsa. Cumque magnam maiores ipsum, assumenda possimus officia expedita nostrum a amet velit, ratione perspiciatis neque iste ipsam iure nemo harum labore natus ad eligendi doloremque corporis distinctio temporibus soluta. Minus excepturi corrupti harum itaque quos nisi repellendus quaerat delectus aut?</td>
-                                    <td></td>
+                                    <td>{{ $user->name}}</td>
+                                    <td>{{ $user->email}}</td>
+                                    <td>{{ $user->alamat}}</td>
+                                    <td>{{ $user->telephone}}</td>
+                                    <td>{{ $user->gambar}}</td>
+                                    <td>{{ $user->gender_id}}</td>
+                                    <td>{{ $user->role_id}}</td>
+                                    <td>{{ $user->created_at}}</td>
+                                    <td>{{ $user->updated_at}}</td>
                                 </tr>
 
                                 </form>
