@@ -38,7 +38,8 @@
                     <div class="mb-3">
                         <input class="form-control bg-dark" type="file" id="formFile" name="gambar" required="required">
                     </div>
-                    <button class="btn btn-success mt-3" type="submit" name="submit">Update</button> 
+                    <button class="btn btn-success mt-3" type="submit" name="submit">Update</button>
+                    <a class="btn btn-success mt-3" href="{{ route('products.index')}}">Kembali</a> 
                 </form>
             </div>
         </div>

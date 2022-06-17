@@ -32,7 +32,7 @@
                                 </tr>
                             </tbody>   
                         </table>
-                        <a class="btn btn-success mt-3" href="#">Kembali</a> 
+                        <a class="btn btn-success mt-3" href="{{ route('products.index')}}">Kembali</a> 
                 </div>
         </div>
     </div>
