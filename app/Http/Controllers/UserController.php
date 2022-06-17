@@ -49,6 +49,7 @@ class UserController extends Controller
     public function show($id)
     {
         $user = User::with('gender_id', 'role_id')->where('id', $id)->first();
+        
         return view('admin/customer/detailCustomer', compact('user'), ['title' => 'Detail User', 'active' => 'user']);
     }
 
