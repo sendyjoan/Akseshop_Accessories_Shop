@@ -52,7 +52,7 @@ class CategoryController extends Controller
         //  Category::create($request->all());
     
 
-        return redirect()->route('categories.index',   ['title' => ' Create Kategori', 'active' => 'kategori']);
+        return redirect()->route('categories.index');
     }
 
     /**
@@ -97,7 +97,7 @@ class CategoryController extends Controller
 
         
 
-        return redirect()->route('categories.index',['title' => ' Update Kategori', 'active' => 'kategori']);
+        return redirect()->route('categories.index');
     }
 
     /**
@@ -109,6 +109,6 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         Category::where('idkategori', $id)->delete();
-        return redirect()->route('categories.index',['title' => ' Delete Kategori', 'active' => 'kategori']);
+        return redirect()->route('categories.index');
     }
 }
