@@ -74,7 +74,7 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
-        return view('admin.kategori.updateKategori');
+        return view('admin.kategori.updateKategori', ['title' => ' Update Kategori', 'active' => 'kategori']);
     }
 
     /**
