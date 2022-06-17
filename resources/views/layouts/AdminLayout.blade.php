@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>ADMIN</title>
+    <title>{{ $title }} | Admin</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -57,11 +57,11 @@
                     </div>
                 </div>
                 <div class="navbar-nav w-100">
-                    <a href="/indexAdmin" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <a href="/customerAdmin" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Daftar Pelanggan</a>
-                    <a href="#" class="nav-item nav-link"><i class="fa fa-keyboard me-2"></i>Daftar Transaksi</a>
-                    <a href="#" class="nav-item nav-link"><i class="fa fa-table me-2"></i> Barang</a>
-                    <a href="#" class="nav-item nav-link"><i class="fa fa-table me-2"></i> Kategori Barang</a>
+                    <a href="#" class="nav-item nav-link {{ $active === 'dashboard' ? 'active' : ''}}"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                    <a href="/customerAdmin" class="nav-item nav-link {{ $active === 'customer' ? 'active' : ''}}"><i class="fa fa-th me-2"></i>Daftar Pelanggan</a>
+                    <a href="#" class="nav-item nav-link {{ $active === 'transaksi' ? 'active' : ''}}"><i class="fa fa-keyboard me-2"></i>Daftar Transaksi</a>
+                    <a href="{{ route('products.index')}}" class="nav-item nav-link {{ $active === 'barang' ? 'active' : ''}}"><i class="fa fa-table me-2"></i>Daftar Barang</a>
+                    <a href="#" class="nav-item nav-link {{ $active === 'kategori' ? 'active' : ''}}"><i class="fa fa-table me-2"></i> Kategori Barang</a>
                     
                 </div>
             </nav>

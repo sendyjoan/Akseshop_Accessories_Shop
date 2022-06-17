@@ -17,7 +17,7 @@ class ProductController extends Controller
     {
         $products = Product::all();
         // dd($products);
-        return view('Admin.Barang.barangIndex', compact('products'));
+        return view('Admin.Barang.barangIndex', compact('products'), ['title' => 'List Product', 'active' => 'barang']);
     }
 
     /**
@@ -28,7 +28,7 @@ class ProductController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('admin.barang.createBarang',['categories' => $categories]);
+        return view('admin.barang.createBarang',['categories' => $categories, 'title' => 'Create Product', 'active' => 'barang']);
     }
 
     /**
@@ -78,7 +78,7 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = Product::with('category_id')->where('idproduct', $id)->first();
-        return view('admin.barang.detailBarang', compact('product'));
+        return view('admin.barang.detailBarang', compact('product'), ['title' => 'Detail Product', 'active' => 'barang']);
     }
 
     /**
@@ -91,7 +91,7 @@ class ProductController extends Controller
     {
         $product = Product::with('category_id')->where('idproduct', $id)->first();
         $categori = Category::all();
-        return view('admin/barang/updateBarang', compact('product', 'categori'));
+        return view('admin/barang/updateBarang', compact('product', 'categori'), ['title' => 'Edit Product', 'active' => 'barang']);
     }
 
     /**

@@ -13,7 +13,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('Admin/indexAdmin');
+        return view('Admin/indexAdmin', ['title' => 'Dashboard', 'active' => 'dashboard']);
     }
 
     /**

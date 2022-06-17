@@ -99,9 +99,9 @@ Route::get('/detailTransaksi', function () {
 
 
 //Route UPDATE
-Route::get('/updateBarang', function () {
-    return view('admin/barang/updateBarang');// View Update Barang
-});
+// Route::get('/updateBarang', function () {
+//     return view('admin/barang/updateBarang');// View Update Barang
+// });
 
 Route::get('/updateKategori', function () {
     return view('admin/kategori/updateKategori');// View Update kategori
