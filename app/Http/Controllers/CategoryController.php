@@ -74,6 +74,7 @@ class CategoryController extends Controller
      */
     public function edit($id)
     {
+        $kategori = Category::where('idkategori', $id)->first();
         return view('admin.kategori.updateKategori', ['title' => ' Update Kategori', 'active' => 'kategori']);
     }
 

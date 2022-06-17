@@ -6,10 +6,10 @@
 <div class="row g-4">
         <div class="col-sm-12 col-xl-6 ">
             <div class="bg-secondary text-center  rounded p-4">
-                <h6 class="mb-4">Update Kategori Barang</h6>
-                <form action="" method="post"  enctype="multipart/form-data">
-                @csrf 
+            <form action="" method="post"  enctype="multipart/form-data">
+                 @csrf 
                 @method('PUT')
+                <h6 class="mb-4">Update Kategori Barang</h6>
                     <div class="form-floating mb-3">
                         <input type="text" class="form-control" id="floatingInput" name="namakategori" placeholder="Nama kategori Barang">
                         <label for="floatingInput">Nama Kategori</label>
