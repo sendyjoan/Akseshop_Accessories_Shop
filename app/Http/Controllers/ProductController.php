@@ -89,7 +89,9 @@ class ProductController extends Controller
      */
     public function edit($id)
     {
-        //
+        $product = Product::with('category_id')->where('idproduct', $id)->first();
+        $categori = Category::all();
+        return view('admin/barang/updateBarang', compact('product', 'categori'));
     }
 
     /**
@@ -101,7 +103,34 @@ class ProductController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'namabarang' => 'required',
+            'deskripsi' => 'required',
+            'stock' => 'required',
+            'kategori' => 'required',
+            'harga' => 'required',
+            'gambar' => 'required',
+        ]);
+
+        if ($request->file('gambar')) {
+            $image_name = $request->file('gambar')->store('product_img', 'public');
+        }
+
+        $product = Product::with('category_id')->where('idproduct', $id)->first();
+        $product->namaproduct = $request->get('namabarang');
+        $product->deskripsi = $request->get('deskripsi');
+        $product->stock = $request->get('stock');
+        $product->harga = $request->get('harga');
+        $product->gambar = $image_name;
+        $product->save();
+        
+        $kategori = new Category;
+        $kategori->idkategori = $request->get('kategori');
+
+        $product->category_id()->associate($kategori);
+        $product->save();
+
+        return redirect()->route('products.index');
     }
 
     /**
