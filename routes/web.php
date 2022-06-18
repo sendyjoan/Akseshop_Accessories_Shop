@@ -10,6 +10,7 @@ use App\Http\Controllers\BarangController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\stokPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -30,6 +31,7 @@ Route::prefix('dashboard')->group(function () {
     Route::resource('users', UserController::class)->middleware('checkRole: 1');
     Route::resource('products', ProductController::class)->middleware('checkRole: 1');
     Route::resource('categories', CategoryController::class)->middleware('checkRole: 1');
+    Route::resource('add', stokController::class)->middleware('checkRole: 1');
     Route::resource('/', AdminController::class)->middleware('checkRole: 1');    
 });
 
@@ -128,3 +130,9 @@ Route::get('/detailTransaksi', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+
+//  Route::get('/addStock', function () {
+//      return view('Admin/stok/stokIndex');// View create kategori
+//  });
