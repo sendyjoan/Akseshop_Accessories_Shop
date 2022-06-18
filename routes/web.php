@@ -20,15 +20,21 @@ use App\Http\Controllers\LandingPageController;
 |
 */
 
-Route::get('/', [LandingPageController::class, 'landingpage']); //Menampilkan Landing Page
-Route::get('/about', [LandingPageController::class, 'aboutus']); //Menampilkan Halaman About Us
-Route::get('/product', [LandingPageController::class, 'product']); //Menampilkan Halaman Product
+// Route::get('/', [LandingPageController::class, 'landingpage']); //Menampilkan Landing Page
+// Route::get('/about', [LandingPageController::class, 'aboutus']); //Menampilkan Halaman About Us
+// Route::get('/product', [LandingPageController::class, 'product']); //Menampilkan Halaman Product
 
 Route::prefix('dashboard')->group(function () {
     Route::resource('users', UserController::class)->middleware('checkRole: 1');
     Route::resource('products', ProductController::class)->middleware('checkRole: 1');
     Route::resource('categories', CategoryController::class)->middleware('checkRole: 1');
     Route::resource('/', AdminController::class)->middleware('checkRole: 1');    
+});
+
+Route::prefix('/')->group(function () {
+    Route::get('/', [LandingPageController::class, 'landingpage']);
+    Route::get('about', [LandingPageController::class, 'aboutus']); //Menampilkan Halaman About Us
+    Route::get('product', [LandingPageController::class, 'product']);  
 });
 
 Route::get('/detail', function () {
