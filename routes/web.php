@@ -72,9 +72,9 @@ Route::get('/alert', function () {
 //     return view('Admin/customer/customerAdmin');//View List User
 // });
 
- Route::get('/kategori', function () {
-     return view('Admin/Kategori/kategoriIndex');// View List Kategori
- });
+//  Route::get('/kategori', function () {
+//      return view('Admin/Kategori/kategoriIndex');// View List Kategori
+//  });
 
 // Route::get('/barang', function () {
 //     return view('Admin/Barang/barangIndex');// View List Barang
@@ -85,13 +85,13 @@ Route::get('/transaksi', function () {
 
 
 //route DETAIL
-Route::get('/detailCust', function () {
-    return view('admin/customer/detailCustomer');// View Detail Customer
-});
+// Route::get('/detailCust', function () {
+//     return view('admin/customer/detailCustomer');// View Detail Customer
+// });
 
-Route::get('/detailBarang', function () {
-    return view('admin/barang/detailBarang');// View Detail Barang
-});
+// Route::get('/detailBarang', function () {
+//     return view('admin/barang/detailBarang');// View Detail Barang
+// });
 
 Route::get('/detailTransaksi', function () {
     return view('admin/transaksi/detailTransaksi');// View Detail Transaksi
@@ -103,9 +103,9 @@ Route::get('/detailTransaksi', function () {
 //     return view('admin/barang/updateBarang');// View Update Barang
 // });
 
-Route::get('/updateKategori', function () {
-    return view('admin/kategori/updateKategori');// View Update kategori
-});
+// Route::get('/updateKategori', function () {
+//     return view('admin/kategori/updateKategori');// View Update kategori
+// });
 
 // Route::get('/createBarang', function () {
 //     return view('admin/barang/createBarang');// View Tambah Barang
@@ -113,6 +113,6 @@ Route::get('/updateKategori', function () {
 
 
 //Route Create
-Route::get('/createKategori', function () {
-    return view('admin/kategori/createKategori');// View create kategori
-});
+// Route::get('/createKategori', function () {
+//     return view('admin/kategori/createKategori');// View create kategori
+// });

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class CategoryController extends Controller
 {
@@ -15,8 +16,9 @@ class CategoryController extends Controller
     public function index()
     {
         $categories = Category::all();
+        $user = Auth::user();
         // dd($categories);
-        return view('Admin/Kategori/kategoriIndex', compact('categories'),['title' => ' List Kategori', 'active' => 'kategori']);
+        return view('Admin/Kategori/kategoriIndex', compact('categories', 'user'),['title' => ' List Kategori', 'active' => 'kategori']);
     }
 
     /**
@@ -26,8 +28,8 @@ class CategoryController extends Controller
      */
     public function create()
     {
-      
-        return view('admin/kategori/createKategori',['title' => 'List Kategori', 'active' => 'kategori']);
+        $user = Auth::user();
+        return view('admin/kategori/createKategori',['title' => 'List Kategori', 'active' => 'kategori', 'user' => $user]);
     }
 
 
@@ -75,7 +77,8 @@ class CategoryController extends Controller
     public function edit($id)
     {
         $categories=Category::where('idkategori', $id)->first();
-        return view('admin.kategori.updateKategori', compact('categories'),['title' => ' Update Kategori', 'active' => 'kategori']);
+        $user = Auth::user();
+        return view('admin.kategori.updateKategori', compact('categories', 'user'),['title' => ' Update Kategori', 'active' => 'kategori']);
     }
 
     /**

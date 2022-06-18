@@ -26,13 +26,13 @@
                             <form action="" method="post">
                             @csrf
                                 <tr>
-                                    <td>{{ $user->name}}</td>
-                                    <td>{{ $user->email}}</td>
-                                    <td>{{ $user->alamat}}</td>
-                                    <td>{{ $user->telephone}}</td>
-                                    <td>{{ $user->gambar}}</td>
-                                    <td>{{ $user->created_at}}</td>
-                                    <td>{{ $user->updated_at}}</td>
+                                    <td>{{ $users->name}}</td>
+                                    <td>{{ $users->email}}</td>
+                                    <td>{{ $users->alamat}}</td>
+                                    <td>{{ $users->telephone}}</td>
+                                    <td>{{ $users->gambar}}</td>
+                                    <td>{{ $users->created_at}}</td>
+                                    <td>{{ $users->updated_at}}</td>
                                 </tr>
 
                                 </form>

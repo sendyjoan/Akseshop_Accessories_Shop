@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -15,8 +16,9 @@ class UserController extends Controller
     public function index()
     {
         $users = User::all();
+        $user = Auth::user();
         // dd($users);
-        return view('admin.customer.customerAdmin', compact('users'), ['title' => 'List Users', 'active' => 'user']);
+        return view('admin.customer.customerAdmin', compact('users', 'user'), ['title' => 'List Users', 'active' => 'user']);
     }
 
     /**
@@ -26,7 +28,8 @@ class UserController extends Controller
      */
     public function create()
     {
-        return view('admin.customer.createCustomer', ['title' => 'Create Customer', 'active' => 'user']);
+        $user = Auth::user();
+        return view('admin.customer.createCustomer', ['title' => 'Create Customer', 'active' => 'user', 'user' => $user]);
     }
 
     /**
@@ -48,9 +51,9 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        $user = User::with('gender_id', 'role_id')->where('id', $id)->first();
-        
-        return view('admin/customer/detailCustomer', compact('user'), ['title' => 'Detail User', 'active' => 'user']);
+        $users = User::with('gender_id', 'role_id')->where('id', $id)->first();
+        $user = Auth::user();
+        return view('admin/customer/detailCustomer', compact('users', 'user'), ['title' => 'Detail User', 'active' => 'user']);
     }
 
     /**
