@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\ChartController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
@@ -36,6 +37,7 @@ Route::prefix('/')->group(function () {
     Route::get('/', [LandingPageController::class, 'landingpage']);
     Route::get('about', [LandingPageController::class, 'aboutus']); //Menampilkan Halaman About Us
     Route::resource('barang', BarangController::class)->middleware('checkRole: 2');
+    Route::resource('chart', ChartController::class)->middleware('checkRole: 2');
 });
 
 Route::get('/detail', function () {
@@ -46,9 +48,9 @@ Route::get('/editProfile', function () {
     return view('User/editProfile');// Edit Profile User (RF)
 });
 
-Route::get('/chart', function () {
-    return view('User/chart');// Show Chart
-})->middleware('checkRole: 2');
+// Route::get('/chart', function () {
+//     return view('User/chart');// Show Chart
+// })->middleware('checkRole: 2');
 
 
 

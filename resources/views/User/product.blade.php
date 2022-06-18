@@ -37,7 +37,11 @@
                                 <ul>
                                     <li><a href="{{ route('barang.show', $product->idproduct)}}" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
                                 </ul>
-                                <a class="cart" href="#">Add to Cart</a>
+                                <form action="{{ route('chart.store')}}" method="post">
+                                    @csrf
+                                    <input type="hidden" name="idproduct" value="{{$product->idproduct}}">
+                                    <a class="cart"><button type="submit" name="submit">Add To Chart</button></a>
+                                </form>
                             </div>
                         </div>    
                         <div class="why-text">
