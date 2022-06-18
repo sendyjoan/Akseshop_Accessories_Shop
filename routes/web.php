@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BarangController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\LandingPageController;
@@ -34,7 +35,7 @@ Route::prefix('dashboard')->group(function () {
 Route::prefix('/')->group(function () {
     Route::get('/', [LandingPageController::class, 'landingpage']);
     Route::get('about', [LandingPageController::class, 'aboutus']); //Menampilkan Halaman About Us
-    Route::get('product', [LandingPageController::class, 'product']);  
+    Route::resource('barang', BarangController::class);
 });
 
 Route::get('/detail', function () {

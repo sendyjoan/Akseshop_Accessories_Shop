@@ -17,6 +17,13 @@ class LandingPageController extends Controller
     }
 
     public function product(){
-        return view('User/product');
+        $products = Product::all();
+        return view('User/product', compact('products'));
+    }
+
+    public function show($id){
+        $product = Product::where('idproduct', $id)->first();
+        // dd($product);
+        return view('User/detailProduct', compact('product'));
     }
 }
