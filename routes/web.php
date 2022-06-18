@@ -122,3 +122,6 @@ Route::get('/detailTransaksi', function () {
 // Route::get('/createKategori', function () {
 //     return view('admin/kategori/createKategori');// View create kategori
 // });
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
