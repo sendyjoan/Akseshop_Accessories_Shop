@@ -3,8 +3,10 @@
 namespace App\Models;
 
 use App\Models\Role;
+use App\Models\Chart;
 use App\Models\Order;
 use App\Models\Gender;
+use App\Models\Add_Stock;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -59,6 +61,10 @@ class User extends Authenticatable
 
     public function order(){
         return $this->hasMany(Order::class);
+    }
+
+    public function chart(){
+        return $this->hasMany(Chart::class);
     }
 
     public function add_stock(){
