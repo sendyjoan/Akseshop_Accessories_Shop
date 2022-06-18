@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
-use Illuminate\Http\Request;
 use App\Models\Category;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProductController extends Controller
 {
@@ -16,8 +17,9 @@ class ProductController extends Controller
     public function index()
     {
         $products = Product::all();
+        $user = Auth::user();
         // dd($products);
-        return view('Admin.Barang.barangIndex', compact('products'), ['title' => 'List Product', 'active' => 'barang']);
+        return view('Admin.Barang.barangIndex', compact('products', 'user'), ['title' => 'List Product', 'active' => 'barang']);
     }
 
     /**
@@ -28,7 +30,8 @@ class ProductController extends Controller
     public function create()
     {
         $categories = Category::all();
-        return view('admin.barang.createBarang',['categories' => $categories, 'title' => 'Create Product', 'active' => 'barang']);
+        $user = Auth::user();
+        return view('admin.barang.createBarang',['categories' => $categories, 'user' => $user, 'title' => 'Create Product', 'active' => 'barang']);
     }
 
     /**
@@ -78,7 +81,8 @@ class ProductController extends Controller
     public function show($id)
     {
         $product = Product::with('category_id')->where('idproduct', $id)->first();
-        return view('admin.barang.detailBarang', compact('product'), ['title' => 'Detail Product', 'active' => 'barang']);
+        $user = Auth::user();
+        return view('admin.barang.detailBarang', compact('product', 'user'), ['title' => 'Detail Product', 'active' => 'barang']);
     }
 
     /**
@@ -91,7 +95,8 @@ class ProductController extends Controller
     {
         $product = Product::with('category_id')->where('idproduct', $id)->first();
         $categori = Category::all();
-        return view('admin/barang/updateBarang', compact('product'), ['title' => 'Edit Product', 'active' => 'barang']);
+        $user = Auth::user();
+        return view('admin/barang/updateBarang', compact('product', 'user', 'categori'), ['title' => 'Edit Product', 'active' => 'barang']);
     }
 
     /**
