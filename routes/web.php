@@ -35,7 +35,7 @@ Route::prefix('dashboard')->group(function () {
 Route::prefix('/')->group(function () {
     Route::get('/', [LandingPageController::class, 'landingpage']);
     Route::get('about', [LandingPageController::class, 'aboutus']); //Menampilkan Halaman About Us
-    Route::resource('barang', BarangController::class);
+    Route::resource('barang', BarangController::class)->middleware('checkRole: 2');
 });
 
 Route::get('/detail', function () {
