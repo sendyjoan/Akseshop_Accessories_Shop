@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+
 
 class LandingPageController extends Controller
 {
@@ -21,9 +23,33 @@ class LandingPageController extends Controller
         return view('User/product', compact('products'));
     }
 
+     /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function show($id){
         $product = Product::where('idproduct', $id)->first();
         // dd($product);
         return view('User/detailProduct', compact('product'));
     }
+
+
+    public function index()
+    {
+         $user = Auth::user();
+
+         if ($user->role_id_idrole === 2) {
+             return redirect()->route('/');
+        }
+        // return view('User/index');
+    }
+
+
+    
 }
