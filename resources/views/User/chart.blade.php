@@ -38,11 +38,17 @@
                                         <p>Rp. {{ $chart->subtotal}}</p>
                                     </td>
                                     <td class="remove-pr">
-                                        <a href="#">
+                                        <form action="{{ route('chart.destroy', ['chart'=>$chart->idchart])}}" method="post">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button class="btn btn-sm btn-danger" type="submit">Delete</button></td>
+                                        </form>
+                                        {{-- <a href="#">
 									<i class="fas fa-times"></i>
-								</a>
+								</a> --}}
                                     </td>
                                 </tr>
+                                <p hidden>{{$total += $chart->subtotal}}</p>
                                 @endforeach
                             </tbody>
                         </table>
@@ -57,13 +63,13 @@
                         <h3>Order summary</h3>
                         <div class="d-flex">
                             <h4>Sub Total</h4>
-                            <div class="ml-auto font-weight-bold"> $ 130 </div>
+                            <div class="ml-auto font-weight-bold">{{ $total}}</div>
                         </div>
 
                         <hr>
                         <div class="d-flex gr-total">
                             <h5>Grand Total</h5>
-                            <div class="ml-auto h5"> $ 388 </div>
+                            <div class="ml-auto h5">{{ $total}}</div>
                         </div>
                         <hr> </div>
                 </div>
