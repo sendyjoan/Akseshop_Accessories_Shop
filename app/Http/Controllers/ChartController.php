@@ -18,9 +18,9 @@ class ChartController extends Controller
     public function index()
     {
         $user = Auth::user()->id;
-        $charts = Chart::where('user_id_id', $user);
-        dd($charts);
-        // return view('User/chart', compact('charts'));
+        $charts = Chart::with('product_id')->where('user_id_id', $user)->get();
+        // dd($charts);
+        return view('User/chart', compact('charts'), ['total' => 0]);
     }
 
     /**
@@ -44,23 +44,32 @@ class ChartController extends Controller
         $iduser = Auth::user()->id;
         $product = Product::where('idproduct', $request->idproduct)->first();
 
-        $chart = new Chart;
-        $chart->quantity = 1;
-        $chart->subtotal = $product->harga;
-        $chart->status = 0;
+        $chart = Chart::where('product_id_idproduct', $request->idproduct)->where('user_id_id', $iduser)->where('status', 0)->first();
+        if (isset($chart)) {
+            $chart->quantity += 1;
+            $chart->save();
+            $chart->subtotal = $chart->quantity * $product->harga;
+            $chart->save();
+            return redirect()->route('chart.index');
+        }else{
+            $chart = new Chart;
+            $chart->quantity = 1;
+            $chart->subtotal = $product->harga;
+            $chart->status = 0;
 
-        $user = new User;
-        $user->id = $iduser;
+            $user = new User;
+            $user->id = $iduser;
 
-        $product = new Product;
-        $product->idproduct = $request->idproduct;
+            $product = new Product;
+            $product->idproduct = $request->idproduct;
 
-        $chart->user_id()->associate($user);
-        $chart->product_id()->associate($product);
+            $chart->user_id()->associate($user);
+            $chart->product_id()->associate($product);
 
-        $chart->save();
+            $chart->save();
 
-        return redirect()->route('barang.index');
+            return redirect()->route('chart.index');
+        }
     }
 
     /**
@@ -105,6 +114,7 @@ class ChartController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Chart::where('idchart', $id)->delete();
+        return redirect()->route('chart.index');
     }
 }

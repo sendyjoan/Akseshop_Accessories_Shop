@@ -22,27 +22,33 @@
                                     <tr>
                                     <td class="thumbnail-img">
                                         <a href="#">
-									<img class="img-fluid" src="" alt="" />
+									<img class="img-fluid" src="{{ asset('storage/'.$chart->product_id->gambar)}}" alt="" />
 								</a>
                                     </td>
                                     <td class="name-pr">
                                         <a href="#">
-									{{$charts->quantity}}
+									{{$chart->product_id->namaproduct}}
 								</a>
                                     </td>
                                     <td class="price-pr">
-                                        <p>$ 80.0</p>
+                                        <p>Rp. {{ $chart->product_id->harga}}</p>
                                     </td>
-                                    <td class="quantity-box"><input type="number" size="4" value="1" min="0" step="1" class="c-input-text qty text"></td>
+                                    <td class="quantity-box">{{ $chart->quantity}}</td>
                                     <td class="total-pr">
-                                        <p>$ 80.0</p>
+                                        <p>Rp. {{ $chart->subtotal}}</p>
                                     </td>
                                     <td class="remove-pr">
-                                        <a href="#">
+                                        <form action="{{ route('chart.destroy', ['chart'=>$chart->idchart])}}" method="post">
+                                            @csrf
+                                            @method('DELETE')
+                                            <button class="btn btn-sm btn-danger" type="submit">Delete</button></td>
+                                        </form>
+                                        {{-- <a href="#">
 									<i class="fas fa-times"></i>
-								</a>
+								</a> --}}
                                     </td>
                                 </tr>
+                                <p hidden>{{$total += $chart->subtotal}}</p>
                                 @endforeach
                             </tbody>
                         </table>
@@ -57,29 +63,13 @@
                         <h3>Order summary</h3>
                         <div class="d-flex">
                             <h4>Sub Total</h4>
-                            <div class="ml-auto font-weight-bold"> $ 130 </div>
+                            <div class="ml-auto font-weight-bold">{{ $total}}</div>
                         </div>
-                        <div class="d-flex">
-                            <h4>Discount</h4>
-                            <div class="ml-auto font-weight-bold"> $ 40 </div>
-                        </div>
-                        <hr class="my-1">
-                        <div class="d-flex">
-                            <h4>Coupon Discount</h4>
-                            <div class="ml-auto font-weight-bold"> $ 10 </div>
-                        </div>
-                        <div class="d-flex">
-                            <h4>Tax</h4>
-                            <div class="ml-auto font-weight-bold"> $ 2 </div>
-                        </div>
-                        <div class="d-flex">
-                            <h4>Shipping Cost</h4>
-                            <div class="ml-auto font-weight-bold"> Free </div>
-                        </div>
+
                         <hr>
                         <div class="d-flex gr-total">
                             <h5>Grand Total</h5>
-                            <div class="ml-auto h5"> $ 388 </div>
+                            <div class="ml-auto h5">{{ $total}}</div>
                         </div>
                         <hr> </div>
                 </div>
