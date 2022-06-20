@@ -18,9 +18,9 @@ class ChartController extends Controller
     public function index()
     {
         $user = Auth::user()->id;
-        $charts = Chart::where('user_id_id', $user);
-        dd($charts);
-        // return view('User/chart', compact('charts'));
+        $charts = Chart::with('product_id')->where('user_id_id', $user)->get();
+        // dd($charts);
+        return view('User/chart', compact('charts'));
     }
 
     /**
@@ -46,7 +46,7 @@ class ChartController extends Controller
 
         $chart = new Chart;
         $chart->quantity = 1;
-        $chart->subtotal = $product->harga;
+        $chart->subtotal = $chart->quantity * $product->harga;
         $chart->status = 0;
 
         $user = new User;
