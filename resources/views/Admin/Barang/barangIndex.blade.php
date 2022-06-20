@@ -14,8 +14,10 @@
                             <thead>
                                 <tr class="text-white">
                                     <th scope="col">Nama Barang</th>
+                                    <th scope="col">Deskripsi</th>
                                     <th scope="col">Stock</th>
                                     <th scope="col">Harga</th>
+                                    <th scope="col">Gambar</th>
                                     <th scope="col">Action</th>
                                 </tr>
                             </thead>
@@ -23,8 +25,10 @@
                                 @foreach ($products as $product)
                                     <tr>
                                         <td>{{ $product->namaproduct}}</td>
+                                        <td>{{ $product->deskripsi}}</td>
                                         <td>{{ $product->stock}}</td>
                                         <td>{{ $product->harga}}</td>
+                                        <td>{{ $product->gambar}}</td>
                                         <td><a class="btn btn-sm btn-info" href="{{ route('products.show', $product->idproduct)}}">Detail</a>
                                         <a class="btn btn-sm btn-primary" href="{{ route('products.edit', $product->idproduct)}}">Update</a>
                                         <a class="btn btn-sm btn-primary" href="{{ route('',)}}">Add Stock</a>

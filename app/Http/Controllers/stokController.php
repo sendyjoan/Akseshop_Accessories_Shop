@@ -17,7 +17,7 @@ class stokController extends Controller
     {
         $stok = Add_Stock::all();
         $user = Auth::user();
-        return view('Admin.Stok.stokIndex', compact('stok', 'user'), ['title' => 'Add Stock Product', 'active' => 'add']);
+        return view('Admin.Stok.stokIndex', compact('stok', 'user'), ['title' => 'Add Stock Product', 'active' => 'stock']);
     }
 
     /**
