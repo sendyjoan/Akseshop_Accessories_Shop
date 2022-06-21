@@ -154,3 +154,6 @@ Route::get('/struk', function () {
 // Route::get('/payment', function () {
 //     return view('User/payment');// Checkout Page
 // });
+
+
+Route::get('User/checkout/cetak_pdf',[CheckoutController::class,'cetak_pdf'])->name('cetak_pdf');
