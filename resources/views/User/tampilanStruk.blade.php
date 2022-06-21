@@ -18,35 +18,36 @@
                             </tr>
                         </thead>
                         <tbody>
-                            {{-- @foreach ($charts as $chart) --}}
+                            @foreach ($orders as $order)
                                 <tr>
                                 <td class="thumbnail-img">
                                     <a href="#">
-                                {{-- <img class="img-fluid" src="{{ asset('storage/'.$chart->product_id->gambar)}}" alt="" /> --}}
+                                <img class="img-fluid" src="{{ asset('storage/'.$order->product_id->gambar)}}" alt="" />
                             </a>
                                 </td>
                                 <td class="name-pr">
                                     <a href="#">
-                                {{-- {{$chart->product_id->namaproduct}} --}}
-                                K
+                                {{$order->product_id->namaproduct}}
                             </a>
                                 </td>
                                 <td class="price-pr">
-                                    <p>Rp. </p>
+                                    <p>Rp. {{$order->product_id->harga}}</p>
                                 </td>
-                                <td class="quantity-box"></td>
                                 <td class="total-pr">
-                                    <p>Rp. </p>
+                                    <p>{{ $order->qty}}</p>
+                                </td>
+                                <td class="price-pr">
+                                    <p>Rp. {{$order->subtotal}}</p>
                                 </td>
                             </tr>
-                            {{-- @endforeach --}}
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
 
-            <div class="col-12 d-flex shopping-box"><button href="#" class="ml-auto btn hvr-hover">Cetak</button> </div>
+            <div class="col-12 d-flex shopping-box"><a href="{{ route('cetak', $ido)}}" class="ml-auto btn hvr-hover" name="submit">Cetak</a> </div>
         </div>
 
     </div>

@@ -24,7 +24,6 @@
                                 <p hidden>{{$total += $chart->subtotal;}}</p>
                             @endforeach
                         <td colspan="2">Total belanja : <h3>{{ $total}}</h3></td>
-            
                         </tbody>
                     </table>
                 </div>
