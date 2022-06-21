@@ -136,3 +136,7 @@ Route::get('/detailTransaksi', function () {
 //  Route::get('/addStock', function () {
 //      return view('Admin/stok/stokIndex');// View create kategori
 //  });
+
+Route::get('/payment', function () {
+    return view('User/payment');// Checkout Page
+});
