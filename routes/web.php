@@ -33,8 +33,9 @@ Route::prefix('dashboard')->group(function () {
     Route::resource('users', UserController::class)->middleware('checkRole: 1');
     Route::resource('products', ProductController::class)->middleware('checkRole: 1');
     Route::resource('categories', CategoryController::class)->middleware('checkRole: 1');
-    Route::resource('add', stokController::class)->middleware('checkRole: 1');
-    Route::resource('/', AdminController::class)->middleware('checkRole: 1');    
+    // Route::resource('add', stokController::class)->middleware('checkRole: 1');
+    Route::resource('/', AdminController::class)->middleware('checkRole: 1');
+    Route::resource('orders', OrderAdminController::class);    
 });
 
 Route::prefix('/')->group(function () {
