@@ -42,9 +42,9 @@ Route::prefix('/')->group(function () {
     Route::resource('chart', ChartController::class)->middleware('checkRole: 2');
 });
 
-Route::get('/detail', function () {
-    return view('User/detailProduct');
-});
+// Route::get('/detail', function () {
+//     return view('User/detailProduct');
+// });
 
 Route::get('/editProfile', function () {
     return view('User/editProfile');// Edit Profile User (RF)
