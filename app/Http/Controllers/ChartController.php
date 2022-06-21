@@ -18,7 +18,7 @@ class ChartController extends Controller
     public function index()
     {
         $user = Auth::user()->id;
-        $charts = Chart::with('product_id')->where('user_id_id', $user)->get();
+        $charts = Chart::with('product_id')->where('user_id_id', $user)->where('status', 0)->get();
         // dd($charts);
         return view('User/chart', compact('charts'), ['total' => 0]);
     }
