@@ -110,9 +110,9 @@ Route::get('/alert', function () {
 //     return view('admin/barang/detailBarang');// View Detail Barang
 // });
 
-Route::get('/detailTransaksi', function () {
-    return view('admin/transaksi/detailTransaksi');// View Detail Transaksi
-});
+// Route::get('/detailTransaksi', function () {
+//     return view('admin/transaksi/detailTransaksi');// View Detail Transaksi
+// });
 
 
 //Route UPDATE
