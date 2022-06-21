@@ -140,3 +140,10 @@ Route::get('/detailTransaksi', function () {
 Route::get('/payment', function () {
     return view('User/payment');// Checkout Page
 });
+
+
+
+Route::get('/struk', function () {
+    return view('User/tampilanStruk');// Checkout Page
+});
+
