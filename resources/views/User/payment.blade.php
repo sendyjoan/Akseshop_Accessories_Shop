@@ -20,14 +20,18 @@
                             </tr>
                         </thead>
                         <tbody>
-                        <td colspan="2">Total Harga :</td>
-                        
+                        <td colspan="2">Total belanja :</td>
+            
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
-            <div class="col-12 d-flex shopping-box"><a href="#" class="ml-auto btn hvr-hover">Upload Bukti Pembayaran</a> <a href="#" class="ml-auto btn hvr-hover">Simpan</a></div>
+        
+            <label class="form-label" for="customFile">Upload Bukti Pembayaran</label>
+            <input type="file" class="form-control" id="customFile" />
+            </br>
+            <div class="col-12 d-flex shopping-box"> <a href="#" class="ml-auto btn hvr-hover">Simpan</a></div>
           
         </div>
 
