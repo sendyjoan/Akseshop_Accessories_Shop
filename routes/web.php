@@ -12,6 +12,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\stokPageController;
 use App\Http\Controllers\OrderUserController;
+use App\Http\Controllers\OrderAdminController;
 use App\Http\Controllers\LandingPageController;
 
 /*
@@ -33,8 +34,9 @@ Route::prefix('dashboard')->group(function () {
     Route::resource('users', UserController::class)->middleware('checkRole: 1');
     Route::resource('products', ProductController::class)->middleware('checkRole: 1');
     Route::resource('categories', CategoryController::class)->middleware('checkRole: 1');
-    Route::resource('add', stokController::class)->middleware('checkRole: 1');
-    Route::resource('/', AdminController::class)->middleware('checkRole: 1');    
+    // Route::resource('add', stokController::class)->middleware('checkRole: 1');
+    Route::resource('/', AdminController::class)->middleware('checkRole: 1');
+    Route::resource('orders', OrderAdminController::class);    
 });
 
 Route::prefix('/')->group(function () {
@@ -94,9 +96,9 @@ Route::get('/alert', function () {
 // Route::get('/barang', function () {
 //     return view('Admin/Barang/barangIndex');// View List Barang
 // });
-Route::get('/transaksi', function () {
-    return view('admin/transaksi/transaksiIndex');// View List transaksi
-});
+// Route::get('/transaksi', function () {
+//     return view('admin/transaksi/transaksiIndex');// View List transaksi
+// });
 
 
 //route DETAIL
@@ -108,9 +110,9 @@ Route::get('/transaksi', function () {
 //     return view('admin/barang/detailBarang');// View Detail Barang
 // });
 
-Route::get('/detailTransaksi', function () {
-    return view('admin/transaksi/detailTransaksi');// View Detail Transaksi
-});
+// Route::get('/detailTransaksi', function () {
+//     return view('admin/transaksi/detailTransaksi');// View Detail Transaksi
+// });
 
 
 //Route UPDATE
