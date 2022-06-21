@@ -9,8 +9,10 @@ use App\Http\Controllers\ChartController;
 use App\Http\Controllers\BarangController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\stokPageController;
+use App\Http\Controllers\OrderUserController;
+use App\Http\Controllers\LandingPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,6 +42,8 @@ Route::prefix('/')->group(function () {
     Route::get('about', [LandingPageController::class, 'aboutus']); //Menampilkan Halaman About Us
     Route::resource('barang', BarangController::class)->middleware('checkRole: 2');
     Route::resource('chart', ChartController::class)->middleware('checkRole: 2');
+    Route::resource('checkout', OrderUserController::class)->middleware('checkRole: 2');
+    // Route::get('checkout', [CheckoutController::class, 'index'])->middleware('checkRole: 2')->name('checkout');
 });
 
 // Route::get('/detail', function () {
@@ -60,9 +64,9 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::get('/cekout', function () {
-    return view('User/checkout');// Checkout Page
-});
+// Route::get('/cekout', function () {
+//     return view('User/checkout');// Checkout Page
+// });
 
 
 
@@ -137,6 +141,6 @@ Route::get('/detailTransaksi', function () {
 //      return view('Admin/stok/stokIndex');// View create kategori
 //  });
 
-Route::get('/payment', function () {
-    return view('User/payment');// Checkout Page
-});
+// Route::get('/payment', function () {
+//     return view('User/payment');// Checkout Page
+// });
