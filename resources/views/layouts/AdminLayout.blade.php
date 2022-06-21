@@ -62,7 +62,7 @@
                     <a href="#" class="nav-item nav-link {{ $active === 'transaksi' ? 'active' : ''}}"><i class="fa fa-keyboard me-2"></i>Daftar Transaksi</a>
                     <a href="{{ route('products.index')}}" class="nav-item nav-link {{ $active === 'barang' ? 'active' : ''}}"><i class="fa fa-table me-2"></i>Daftar Barang</a>
                     <a href="{{ route('categories.index')}}" class="nav-item nav-link {{ $active === 'kategori' ? 'active' : ''}}"><i class="fa fa-table me-2"></i> Kategori Barang</a>
-                    <a href="{{ route('stock.index')}}" class="nav-item nav-link {{ $active === 'stock' ? 'active' : ''}}"><i class="fa fa-table me-2"></i> Add Stock Barang</a>
+                    {{-- <a href="{{ route('stock.index')}}" class="nav-item nav-link {{ $active === 'stock' ? 'active' : ''}}"><i class="fa fa-table me-2"></i> Add Stock Barang</a> --}}
                     
                 </div>
             </nav>
