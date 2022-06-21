@@ -12,6 +12,7 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\CheckoutController;
 use App\Http\Controllers\stokPageController;
 use App\Http\Controllers\OrderUserController;
+use App\Http\Controllers\OrderAdminController;
 use App\Http\Controllers\LandingPageController;
 
 /*
@@ -95,9 +96,9 @@ Route::get('/alert', function () {
 // Route::get('/barang', function () {
 //     return view('Admin/Barang/barangIndex');// View List Barang
 // });
-Route::get('/transaksi', function () {
-    return view('admin/transaksi/transaksiIndex');// View List transaksi
-});
+// Route::get('/transaksi', function () {
+//     return view('admin/transaksi/transaksiIndex');// View List transaksi
+// });
 
 
 //route DETAIL

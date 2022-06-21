@@ -13,10 +13,11 @@
                         <table class="table text-start align-middle table-bordered table-hover mb-0">
                             <thead>
                                 <tr class="text-white">
-                                    <th scope="col"><input class="form-check-input" type="checkbox"></th>
-                                    <th scope="col">ID transaksi</th>
-                                    <th scope="col">ID User</th>
-                                    <th scope="col">Total Order</th>
+                                    <th scope="col">Kode</th>
+                                    <th scope="col">Nama Pengguna</th>
+                                    <th scope="col">Telephone</th>
+                                    <th scope="col">Alamat</th>
+                                    <th scope="col">Total</th>
                                     <th scope="col">Bukti Pembayaran</th>
                                     <th scope="col">Action</th>
                                     
@@ -24,29 +25,17 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                @foreach ($orders as $order)
                                 <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>01</td>
-                                    <td>001</td>
-                                    <td> 1000000</td>
-                                    <td></td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Show</a>
-                                    <a class="btn btn-sm btn-primary" href="">Update</a>
-                                    <a class="btn btn-sm btn-primary" href="">Delete</a></td>
-                                    
+                                    <td>{{ $order->idorder}}</td>
+                                    <td>{{ $order->user_id->name}}</td>
+                                    <td>{{ $order->user_id->telephone}}</td>
+                                    <td>{{ $order->user_id->alamat}}</td>
+                                    <td>{{ $order->totaluser}}</td>
+                                    <td><img width="150px" src="{{asset('storage/'.$order->buktipembayaran)}}"></td>
+                                    <td><a class="btn btn-sm btn-primary" href="{{ route('orders.show', $order->idorder)}}">Detail</a>
                                 </tr>
-                                <tr>
-                                    <td><input class="form-check-input" type="checkbox"></td>
-                                    <td>01</td>
-                                    <td>001</td>
-                                    <td> 1000000</td>
-                                    <td></td>
-                                    <td><a class="btn btn-sm btn-primary" href="">Show</a>
-                                    <a class="btn btn-sm btn-primary" href="">Update</a>
-                                    <a class="btn btn-sm btn-primary" href="">Delete</a></td>
-                                    
-                                </tr>
-                                
+                                @endforeach
                             </tbody>
                         </table>
                     </div>

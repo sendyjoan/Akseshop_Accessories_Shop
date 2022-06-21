@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
+use App\Models\Order_Detail;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OrderAdminController extends Controller
 {
@@ -13,7 +16,9 @@ class OrderAdminController extends Controller
      */
     public function index()
     {
-        //
+        $user = Auth::user();
+        $orders = Order::with('user_id')->get();
+        return view('admin/transaksi/transaksiIndex', compact('user', 'orders'), ['title' => 'List Transaksi', 'active' => 'transaksi']);
     }
 
     /**
@@ -45,7 +50,9 @@ class OrderAdminController extends Controller
      */
     public function show($id)
     {
-        //
+        $details = Order_Detail::where('order_id_idorder', $id)->get();
+        $user = Auth::user();
+        return view('admin/transaksi/detailTransaksi', compact('details', 'user'), ['title' => 'Detail Transaksi', 'active' => 'transaksi']);
     }
 
     /**
