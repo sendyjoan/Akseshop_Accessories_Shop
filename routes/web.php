@@ -14,6 +14,7 @@ use App\Http\Controllers\stokPageController;
 use App\Http\Controllers\OrderUserController;
 use App\Http\Controllers\OrderAdminController;
 use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
@@ -48,6 +49,9 @@ Route::prefix('/')->group(function () {
     // Route::get('checkout', [CheckoutController::class, 'index'])->middleware('checkRole: 2')->name('checkout');
 });
 
+
+
+
 // Route::get('/detail', function () {
 //     return view('User/detailProduct');
 // });
@@ -58,7 +62,7 @@ Route::get('/editProfile', function () {
 
 // Route::get('/chart', function () {
 //     return view('User/chart');// Show Chart
-// })->middleware('checkRole: 2');
+// })->middleware('checkRole:  2');
 
 
 
