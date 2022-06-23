@@ -7,12 +7,14 @@
         <style type="text/css">
             table tr td,
             table tr th{
-                font-size: 9pt;
+                font-size: 14pt;
             }
         </style>
         <center>
-            <h5>Nota Transaksi</h5>
+            <h5>Nota Transaksi ID #{{$id}}</h5>
         </center>
+
+        <p>{{ $orders[0]->created_at}}</p>
 
         <table class='table table-bordered' style="width:95%; margin:3px auto;">
             <thead>
@@ -36,5 +38,8 @@
             </tbody>
         </table>
         <h3>{{ $total}}</h3>
+        <center>
+            Simpan Nota ini sebagai bukti anda telah berhasil melakukan Transaksi Pada AkseShop Secara Online #Admin Husein
+        </center>
     </body>
 </html>

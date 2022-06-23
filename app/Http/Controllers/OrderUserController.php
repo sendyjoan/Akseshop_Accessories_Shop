@@ -133,7 +133,7 @@ class OrderUserController extends Controller
 
     public function cetak($id){
         $orders = Order_Detail::where('order_id_idorder', $id)->get();
-        $pdf = PDF::loadview('user.checkoutPDF', ['orders' => $orders, 'total' => 0]);
+        $pdf = PDF::loadview('user.checkoutPDF', ['orders' => $orders, 'total' => 0, 'id' => $id]);
         return $pdf->stream();
     }
 }
