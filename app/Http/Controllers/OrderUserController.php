@@ -76,6 +76,8 @@ class OrderUserController extends Controller
             $order_detail->order_id()->associate($order->idorder);
             $product = $chart->product_id_idproduct;
             $product = Product::where('idproduct', $product)->first();
+            $product->stock -= $order_detail->qty;
+            $product->save();
             $order_detail->product_id()->associate($product->idproduct);
             $order_detail->save();
             $chart->status = 1;
