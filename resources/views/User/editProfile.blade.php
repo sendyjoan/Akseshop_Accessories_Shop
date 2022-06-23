@@ -52,5 +52,11 @@
                                 <label class="small mb-1" for="inputPassword">Password</label>
                                 <input class="form-control" id="inputPassword" type="password" placeholder="Enter Password" >
                             </div>
-                        
+                        </div>
+                    </form>
+                </div> 
+            </div>            
+        </div> 
+    </hr>
+</div>                      
 @endsection
