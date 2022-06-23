@@ -15,9 +15,9 @@ class stokController extends Controller
      */
     public function index()
     {
-        $stok = Add_Stock::all();
-        $user = Auth::user();
-        return view('Admin.Stok.stokIndex', compact('stok', 'user'), ['title' => 'Add Stock Product', 'active' => 'stock']);
+        // $stok = Add_Stock::all();
+        // $user = Auth::user();
+        // return view('Admin.Stok.stokIndex', compact('stok', 'user'), ['title' => 'Add Stock Product', 'active' => 'stock']);
     }
 
     /**
@@ -27,7 +27,7 @@ class stokController extends Controller
      */
     public function create()
     {
-        //
+        
     }
 
     /**
@@ -68,7 +68,9 @@ class stokController extends Controller
      */
     public function edit($id)
     {
-        //
+        $user = Auth::user();
+        $product = Product::where('idproduct', $id)->first();
+        return view('admin.stok.stokindex', compact('user', 'product'), ['title' => 'Add Stock Product', 'active' => 'barang']);
     }
 
     /**
@@ -80,7 +82,20 @@ class stokController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $user = Auth::user();
+
+        $product = Product::where('idproduct', $id)->first();
+        $product->stock += $request->get('stock');
+        $product->save();
+
+        $add = new Add_Stock;
+        $add->jumlah = $request->get('stock');
+        $add->user_id()->associate($user);
+        $add->product_id()->associate($product);
+
+        $add->save();
+
+        return redirect()->route('products.show', $id);
     }
 
     /**

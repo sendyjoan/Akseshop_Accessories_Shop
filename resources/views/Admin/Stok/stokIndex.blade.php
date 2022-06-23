@@ -7,15 +7,10 @@
 <div class="row g-4">
         <div class="col-sm-12 col-xl-6 ">
             <div class="bg-secondary text-center  rounded p-4">
-                <form action="#" method="post" enctype="multipart/form-data">
+                <form action="{{ route('addstok.update', $product->idproduct)}}" method="post">
                     @csrf
                     @method('PUT')
-                    <h6 class="mb-4">Add Stock Barang</h6>
-                    <select name="namabarang" class="form-select form-select-sm mb-3" aria-label=".form-select-sm example">
-                                <option selected>Barang</option>
-                                <option value="1">One</option>
-                                <option value="2">Two</option>      
-                    </select>
+                    <h3>Tambah Stok Pada Produk : <br> {{ $product->namaproduct}}</h3>
                     <div class="form-floating mb-3">
                         <input type="number" class="form-control" id="floatingNumber" placeholder="Stock" name="stock">
                         <label for="floatingNumber">Stock</label>
