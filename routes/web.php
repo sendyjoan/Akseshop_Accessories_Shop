@@ -37,7 +37,7 @@ Route::prefix('dashboard')->group(function () {
     Route::resource('categories', CategoryController::class)->middleware('checkRole: 1');
     // Route::resource('add', stokController::class)->middleware('checkRole: 1');
     Route::resource('/', AdminController::class)->middleware('checkRole: 1');
-    Route::resource('orders', OrderAdminController::class);    
+    Route::resource('orders', OrderAdminController::class)->middleware('checkRole: 1');    
 });
 
 Route::prefix('/')->group(function () {
@@ -46,6 +46,7 @@ Route::prefix('/')->group(function () {
     Route::resource('barang', BarangController::class)->middleware('checkRole: 2');
     Route::resource('chart', ChartController::class)->middleware('checkRole: 2');
     Route::resource('checkout', OrderUserController::class)->middleware('checkRole: 2');
+    Route::get('/checkout/cetak/{id}', [OrderUserController::class, 'cetak'])->name('cetak')->middleware('checkRole: 2');
     // Route::get('checkout', [CheckoutController::class, 'index'])->middleware('checkRole: 2')->name('checkout');
 });
 
@@ -153,9 +154,9 @@ Route::get('/alert', function () {
 
 
 
-Route::get('/struk', function () {
-    return view('User/tampilanStruk');// Checkout Page
-});
+// Route::get('/struk', function () {
+//     return view('User/tampilanStruk');// Checkout Page
+// });
 
 // Route::get('/payment', function () {
 //     return view('User/payment');// Checkout Page

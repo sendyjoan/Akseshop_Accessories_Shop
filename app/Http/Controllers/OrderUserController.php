@@ -8,6 +8,7 @@ use App\Models\Product;
 use App\Models\Order_Detail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use PDF;
 
 class OrderUserController extends Controller
 {
@@ -81,6 +82,7 @@ class OrderUserController extends Controller
             $chart->save();
         }
         
+        return redirect()->route('checkout.show', $order->idorder);
     }
 
     /**
@@ -91,7 +93,8 @@ class OrderUserController extends Controller
      */
     public function show($id)
     {
-        //
+        $orders = Order_Detail::where('order_id_idorder', $id)->get();
+        return view('User/tampilanStruk', compact('orders'), ['ido' => $id]);
     }
 
     /**
@@ -126,5 +129,11 @@ class OrderUserController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function cetak($id){
+        $orders = Order_Detail::where('order_id_idorder', $id)->get();
+        $pdf = PDF::loadview('user.checkoutPDF', ['orders' => $orders, 'total' => 0]);
+        return $pdf->stream();
     }
 }

@@ -11,26 +11,30 @@
             }
         </style>
         <center>
-            <h5>Nota Transdaksi</h4>
+            <h5>Nota Transaksi</h5>
         </center>
 
-        <table class='table table-bordered' style="width:95%; margin:0 auto;">
+        <table class='table table-bordered' style="width:95%; margin:3px auto;">
             <thead>
                 <tr>
-                    <th>Judul</th>
-                    <th>Isi</th>
-                    <th>Gambar</th>
+                    <th>Nama Product</th>
+                    <th>Harga</th>
+                    <th>Quantity</th>
+                    <th>Total</th>
                 </tr>
             </thead>
             <tbody>
-                @foreach($articles as $a)
+                @foreach($orders as $order)
                 <tr>
-                    <td>{{ $a->title }}</td>
-                    <td>{{ $a->content }}</td>
-                    <td><img width="100px" src="{{ storage_path('app/public/'.$a->featured_image) }}"></td>
+                    <td>{{ $order->product_id->namaproduct}}</td>
+                    <td>{{ $order->product_id->harga}}</td>
+                    <td>{{ $order->qty}}</td>
+                    <td>{{ $order->subtotal}}</td>
+                    {{ $total += $order->subtotal}}
                 </tr>
                 @endforeach
             </tbody>
         </table>
+        <h3>{{ $total}}</h3>
     </body>
 </html>
