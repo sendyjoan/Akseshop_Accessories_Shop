@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Add_Stock;
 use App\Models\Product;
-use Illuminate\Support\Facades\Auth;
+use App\Models\Add_Stock;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class stokController extends Controller
 {
@@ -94,7 +95,7 @@ class stokController extends Controller
         $add->product_id()->associate($product);
 
         $add->save();
-
+        Alert::success('Stock Ditambahkan', 'Penambahan Stock Berhasil');
         return redirect()->route('products.show', $id);
     }
 

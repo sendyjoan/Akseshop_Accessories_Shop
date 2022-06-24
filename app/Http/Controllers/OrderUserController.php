@@ -2,13 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use PDF;
 use App\Models\Chart;
 use App\Models\Order;
 use App\Models\Product;
 use App\Models\Order_Detail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use PDF;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class OrderUserController extends Controller
 {
@@ -84,6 +85,7 @@ class OrderUserController extends Controller
             $chart->save();
         }
         
+        Alert::success('Pembayaran Diterima', 'Tunggu Hingga Kami Melakukan Verifikasi');
         return redirect()->route('checkout.show', $order->idorder);
     }
 

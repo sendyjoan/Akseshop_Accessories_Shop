@@ -6,6 +6,7 @@ use App\Models\Product;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ProductController extends Controller
 {
@@ -69,6 +70,7 @@ class ProductController extends Controller
         $product->category_id()->associate($kategori);
         $product->save();
 
+        Alert::success('Penambahan Sukses', 'Penambahan Product Berhasil');
         return redirect()->route('products.index');
     }
 
@@ -135,6 +137,7 @@ class ProductController extends Controller
         $product->category_id()->associate($kategori);
         $product->save();
 
+        Alert::success('Berhasil Edit', 'Product Berhasil di Edit');
         return redirect()->route('products.index');
     }
 
@@ -147,6 +150,7 @@ class ProductController extends Controller
     public function destroy($id)
     {
         Product::where('idproduct', $id)->delete();
+        Alert::success('Berhasil Hapus', 'Product Berhasil di Hapus');
         return redirect()->route('products.index');
     }
 }

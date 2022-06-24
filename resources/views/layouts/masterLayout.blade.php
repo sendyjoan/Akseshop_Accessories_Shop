@@ -3,6 +3,7 @@
 <!-- Basic -->
 
 <head>
+    
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -37,7 +38,7 @@
 
 <body>
 
-
+    @include('sweetalert::alert')
     <!-- Start Main Top -->
     <header class="main-header">
         <!-- Start Navigation -->
