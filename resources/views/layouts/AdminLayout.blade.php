@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    
     <meta charset="utf-8">
     <title>{{ $title }} | Admin</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
@@ -38,7 +39,7 @@
 
 
 <body>
-    
+    @include('sweetalert::alert')
 <div class="container-fluid position-relative d-flex p-0">
         <!-- Sidebar Start -->
         <div class="sidebar pe-4 pb-3">

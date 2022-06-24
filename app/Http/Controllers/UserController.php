@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class UserController extends Controller
 {
@@ -88,6 +89,7 @@ class UserController extends Controller
     public function destroy($id)
     {
         User::where('id', $id)->delete();
+        Alert::success('Success Title', 'Success Message');
         return redirect()->route('users.index');
     }
 }

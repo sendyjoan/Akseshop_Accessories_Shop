@@ -7,6 +7,7 @@ use App\Models\Chart;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class ChartController extends Controller
 {
@@ -67,7 +68,7 @@ class ChartController extends Controller
             $chart->product_id()->associate($product);
 
             $chart->save();
-
+            Alert::success('Berhasil Dimasukkan Keranjang', 'Berhasil Memasukkan Barang Ke Keranjang');
             return redirect()->route('chart.index');
         }
     }
@@ -115,6 +116,7 @@ class ChartController extends Controller
     public function destroy($id)
     {
         Chart::where('idchart', $id)->delete();
+        Alert::success('Berhasil Menghapus', 'Barang Berhasil Dihapus Dari Keranjang');
         return redirect()->route('chart.index');
     }
 }

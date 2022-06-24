@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class CategoryController extends Controller
 {
@@ -53,7 +54,7 @@ class CategoryController extends Controller
 
         //  Category::create($request->all());
     
-
+        Alert::success('Penambahan Berhasil', 'Kategori Berhasil Ditambahkan');
         return redirect()->route('categories.index');
     }
 
@@ -99,7 +100,7 @@ class CategoryController extends Controller
         $categories->save();
 
         
-
+        Alert::success('Berhasil Di Edit', 'Kategori Berhasil Di Edit');
         return redirect()->route('categories.index');
     }
 
@@ -112,6 +113,7 @@ class CategoryController extends Controller
     public function destroy($id)
     {
         Category::where('idkategori', $id)->delete();
+        Alert::success('Kategori Dihapus', 'Kategori Berhasil Dihapus');
         return redirect()->route('categories.index');
     }
 }
