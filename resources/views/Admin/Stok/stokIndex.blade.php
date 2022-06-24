@@ -17,7 +17,7 @@
                     </div>
     
                     <button class="btn btn-success mt-3" type="submit" name="submit">Simpan</button>
-                    <a class="btn btn-success mt-3" href="#">Kembali</a> 
+                    <a class="btn btn-success mt-3" href="{{ route('products.index')}}">Kembali</a> 
                 </form>
             </div>
         </div>
