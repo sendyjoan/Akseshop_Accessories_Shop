@@ -33,12 +33,12 @@ use App\Http\Controllers\LandingPageController;
 // Route::get('/product', [LandingPageController::class, 'product']); //Menampilkan Halaman Product
 
 Route::prefix('dashboard')->group(function () {
-    Route::resource('users', UserController::class)->middleware('checkRole: 1');
-    Route::resource('products', ProductController::class)->middleware('checkRole: 1');
-    Route::resource('categories', CategoryController::class)->middleware('checkRole: 1');
-    Route::resource('addstok', stokController::class)->middleware('checkRole: 1');
-    Route::resource('/', AdminController::class)->middleware('checkRole: 1');
-    Route::resource('orders', OrderAdminController::class)->middleware('checkRole: 1');    
+    Route::resource('users', UserController::class);
+    Route::resource('products', ProductController::class);
+    Route::resource('categories', CategoryController::class);
+    Route::resource('addstok', stokController::class);
+    Route::resource('/', AdminController::class);
+    Route::resource('orders', OrderAdminController::class);    
 });
 
 Route::prefix('/')->group(function () {
