@@ -34,7 +34,7 @@ use App\Http\Controllers\LandingPageController;
 
 Route::prefix('dashboard')->group(function () {
     Route::resource('users', UserController::class)->middleware('checkRole: 1');
-    Route::resource('products', ProductController::class)->middleware('checkRole: 1');
+    Route::resource('products', ProductController::class);
     Route::resource('categories', CategoryController::class)->middleware('checkRole: 1');
     Route::resource('addstok', stokController::class)->middleware('checkRole: 1');
     Route::resource('/', AdminController::class)->middleware('checkRole: 1');
@@ -44,7 +44,7 @@ Route::prefix('dashboard')->group(function () {
 Route::prefix('/')->group(function () {
     Route::get('/', [LandingPageController::class, 'landingpage']);
     Route::get('about', [LandingPageController::class, 'aboutus']); //Menampilkan Halaman About Us
-    Route::resource('barang', BarangController::class)->middleware('checkRole: 2');
+    Route::resource('barang', BarangController::class);
     Route::resource('chart', ChartController::class)->middleware('checkRole: 2');
     Route::resource('checkout', OrderUserController::class)->middleware('checkRole: 2');
     Route::get('/checkout/cetak/{id}', [OrderUserController::class, 'cetak'])->name('cetak')->middleware('checkRole: 2');
