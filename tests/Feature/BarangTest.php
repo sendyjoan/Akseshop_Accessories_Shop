@@ -59,12 +59,15 @@ class BarangTest extends TestCase
 
     }
 
-    // public function test_delete_product(){
+   public function test_delete_product(){
+       
+    
+        $product = Product::where('NamaProduct','Gelang')->delete();
+        $response = $this->get('/dashboard/barang');
+        $response->assertDontSee('Gelang');
+        $response->assertSee(200);
 
-    //     Product::destroy($product->NamaProduct);
-
-    //     $this-assertDatabaseMissing('Product',['NamaProduct'=>'Gelang'=>'stock'=>'50']);
-    // }
+   }
 
 
 
