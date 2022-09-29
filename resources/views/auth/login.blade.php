@@ -91,7 +91,6 @@
                             </div>
                                 <form method="POST" action="{{ route('login') }}">
                                     @csrf
-
                                     <div class="row mb-3">
                                         <div class="col-md-10">
                                             <input id="email" 
