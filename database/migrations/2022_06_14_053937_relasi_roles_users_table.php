@@ -14,8 +14,8 @@ class RelasiRolesUsersTable extends Migration
     public function up()
     {
         Schema::table('users', function (Blueprint $table){
-            $table->unsignedBigInteger('role_id')->nullable(); //Add column role_id to users table
-            $table->foreign('role_id')->references('idrole')->on('roles'); //Add foreign key on role_id
+            $table->unsignedBigInteger('role_id_idrole')->nullable(); //Add column role_id to users table
+            $table->foreign('role_id_idrole')->references('idrole')->on('roles'); //Add foreign key on role_id
         });
     }
 

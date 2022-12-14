@@ -14,8 +14,8 @@ class RelasiOrdersOrderDetailsTable extends Migration
     public function up()
     {
         Schema::table('order_details', function (Blueprint $table){
-            $table->unsignedBigInteger('order_id');
-            $table->foreign('order_id')->references('idorder')->on('orders');
+            $table->unsignedBigInteger('order_id_idorder');
+            $table->foreign('order_id_idorder')->references('idorder')->on('orders');
         });
     }
 

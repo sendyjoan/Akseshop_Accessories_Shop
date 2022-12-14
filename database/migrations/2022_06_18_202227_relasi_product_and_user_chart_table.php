@@ -14,10 +14,10 @@ class RelasiProductAndUserChartTable extends Migration
     public function up()
     {
         Schema::table('chart', function (Blueprint $table) {
-            $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('product_id');
-            $table->foreign('user_id')->references('id')->on('users');
-            $table->foreign('product_id')->references('idproduct')->on('products');
+            $table->unsignedBigInteger('user_id_id');
+            $table->unsignedBigInteger('product_id_idproduct');
+            $table->foreign('user_id_id')->references('id')->on('users');
+            $table->foreign('product_id_idproduct')->references('idproduct')->on('products');
         });
     }
 

@@ -14,8 +14,8 @@ class RelasiProductAddStockTable extends Migration
     public function up()
     {
         Schema::table('add_stock', function (Blueprint $table) {
-            $table->unsignedBigInteger('product_id');
-            $table->foreign('product_id')->references('idproduct')->on('products');
+            $table->unsignedBigInteger('product_id_idproduct');
+            $table->foreign('product_id_idproduct')->references('idproduct')->on('products');
         });
     }
 
