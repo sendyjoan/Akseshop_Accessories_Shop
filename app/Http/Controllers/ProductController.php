@@ -54,15 +54,53 @@ class ProductController extends Controller
         ]);
 
         if ($request->file('gambar')) {
-            $image_name = $request->file('gambar')->store('product_img', 'public');
+            $image_name = $request->file('gambar');
+            // $image_name = $request->file('gambar')->store('images', 'public');
+            $storage = new StorageClient([
+                'keyFilePath' => public_path('key.json')
+            ]);
+
+            $bucketName = env('GOOGLE_CLOUD_BUCKET');
+            $bucket = $storage->bucket($bucketName);
+
+            //get filename with extension
+            $filenamewithextension = pathinfo($request->file('gambar')->getClientOriginalName(), PATHINFO_FILENAME);
+            // $filenamewithextension = $request->file('gambar')->getClientOriginalName();
+
+            //get filename without extension
+            $filename = pathinfo($filenamewithextension, PATHINFO_FILENAME);
+
+            //get file extension
+            $extension = $request->file('gambar')->getClientOriginalExtension();
+
+            //filename to store
+            $filenametostore = $filename . '_' . uniqid() . '.' . $extension;
+
+            Storage::put('public/uploads/' . $filenametostore, fopen($request->file('gambar'), 'r+'));
+
+            $filepath = storage_path('app/public/uploads/' . $filenametostore);
+
+            $object = $bucket->upload(
+                fopen($filepath, 'r'),
+                [
+                    'predefinedAcl' => 'publicRead'
+                ]
+            );
+
+            // delete file from local disk
+            Storage::delete('public/uploads/' . $filenametostore);
         }
+
+        // if ($request->file('gambar')) {
+        //     $image_name = $request->file('gambar')->store('product_img', 'public');
+        // }
 
         $product = new Product;
         $product->namaproduct = $request->get('namabarang');
         $product->deskripsi = $request->get('deskripsi');
         $product->stock = $request->get('stock');
         $product->harga = $request->get('harga');
-        $product->gambar = $image_name;
+        $product->gambar = $image_filenametostorename;
         
         $kategori = new Category;
         $kategori->idkategori = $request->get('kategori');
