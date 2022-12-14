@@ -30,7 +30,7 @@ class UserController extends Controller
     public function create()
     {
         $user = Auth::user();
-        return view('admin.customer.createCustomer', ['title' => 'Create Customer', 'active' => 'user', 'user' => $user]);
+        return view('Admin.customer.createCustomer', ['title' => 'Create Customer', 'active' => 'user', 'user' => $user]);
     }
 
     /**
@@ -54,7 +54,7 @@ class UserController extends Controller
     {
         $users = User::with('gender_id', 'role_id')->where('id', $id)->first();
         $user = Auth::user();
-        return view('admin/customer/detailCustomer', compact('users', 'user'), ['title' => 'Detail User', 'active' => 'user']);
+        return view('Admin/customer/detailCustomer', compact('users', 'user'), ['title' => 'Detail User', 'active' => 'user']);
     }
 
     /**
