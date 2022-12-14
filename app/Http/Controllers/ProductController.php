@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use RealRashid\SweetAlert\Facades\Alert;
 
+use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\DB;
+use Google\Cloud\Storage\StorageClient;
+use Illuminate\Support\Facades\URL;
+
 class ProductController extends Controller
 {
     /**
