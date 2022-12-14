@@ -34,9 +34,9 @@ use Illuminate\Support\Facades\Artisan;
 // Route::get('/product', [LandingPageController::class, 'product']); //Menampilkan Halaman Product
 
 Route::get('/mysql', function () {
-    Artisan::call('migrate:rollback', ['--force' => true]);
+    Artisan::call('migrate --seed', ['--force' => true]);
     // Artisan::call('migrate:fresh', ['--force' => true]);
-    Artisan::call('db:seed', ['--force' => true]);
+    // Artisan::call('db:seed', ['--force' => true]);
 });
 
 Route::prefix('dashboard')->group(function () {
