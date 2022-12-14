@@ -16,6 +16,7 @@ use App\Http\Controllers\stokPageController;
 use App\Http\Controllers\OrderUserController;
 use App\Http\Controllers\OrderAdminController;
 use App\Http\Controllers\LandingPageController;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,11 @@ use App\Http\Controllers\LandingPageController;
 // Route::get('/', [LandingPageController::class, 'landingpage']); //Menampilkan Landing Page
 // Route::get('/about', [LandingPageController::class, 'aboutus']); //Menampilkan Halaman About Us
 // Route::get('/product', [LandingPageController::class, 'product']); //Menampilkan Halaman Product
+
+Route::get('/mysql', function () {
+    Artisan::call('migrate:fresh');
+    Artisan::call('db:seed');
+});
 
 Route::prefix('dashboard')->group(function () {
     Route::resource('users', UserController::class)->middleware('checkRole: 1');
