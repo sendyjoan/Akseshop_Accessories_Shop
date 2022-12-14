@@ -12,6 +12,7 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\DB;
 use Google\Cloud\Storage\StorageClient;
 use Illuminate\Support\Facades\URL;
+use Google\Cloud\Core\Exception\NotFoundException;
 
 class ProductController extends Controller
 {
