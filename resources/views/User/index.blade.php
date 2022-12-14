@@ -79,7 +79,7 @@
             </div> --}}
 
             <div class="row special-list">
-                {{-- @foreach ($products as $product)
+                @foreach ($products as $product)
                 <div class="col-lg-3 col-md-6 special-grid best-seller">
                     <div class="products-single fix">
                         <div class="box-img-hover">
@@ -101,7 +101,7 @@
                         </div>
                     </div>
                 </div>
-                @endforeach --}}
+                @endforeach
             </div>
         </div>
     </div>
