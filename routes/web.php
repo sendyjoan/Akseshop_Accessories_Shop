@@ -35,7 +35,7 @@ use Illuminate\Support\Facades\Artisan;
 
 Route::get('/mysql', function () {
     // Artisan::call('migrate:fresh --seed',['--force' => true]);
-    Artisan::call('config:clear', ['--force' => true]);
+    Artisan::call('config:clear');
     Artisan::call('migrate:install', ['--force' => true]);
     Artisan::call('db:seed', ['--force' => true]);
 });
