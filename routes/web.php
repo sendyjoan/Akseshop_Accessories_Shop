@@ -39,6 +39,17 @@ use Illuminate\Support\Facades\Artisan;
 //     Artisan::call('db:seed', ['--force'=>true]);
 // });
 
+Route::get('/fresh', function () {
+    Artisan::call('migrate:fresh', [
+        '--force' => true]);
+    Artisan::call('db:seed', [
+        '--force' => true]);
+});
+
+Route::get('/config-clear', function () {
+    Artisan::call('config:clear');
+});
+
 Route::prefix('dashboard')->group(function () {
     Route::resource('users', UserController::class)->middleware('checkRole: 1');
     Route::resource('products', ProductController::class)->middleware('checkRole: 1');
