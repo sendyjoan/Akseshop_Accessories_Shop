@@ -19,7 +19,7 @@ class UserController extends Controller
         $users = User::all();
         $user = Auth::user();
         // dd($users);
-        return view('admin.customer.customerAdmin', compact('users', 'user'), ['title' => 'List Users', 'active' => 'user']);
+        return view('Admin.customer.customerAdmin', compact('users', 'user'), ['title' => 'List Users', 'active' => 'user']);
     }
 
     /**
