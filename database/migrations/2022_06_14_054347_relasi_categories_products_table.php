@@ -14,8 +14,8 @@ class RelasiCategoriesProductsTable extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table){
-            $table->unsignedBigInteger('category_id')->nullable();
-            $table->foreign('category_id')->references('idkategori')->on('categories');
+            $table->unsignedBigInteger('category_id_idkategori')->nullable();
+            $table->foreign('category_id_idkategori')->references('idkategori')->on('categories');
         });
     }
 
