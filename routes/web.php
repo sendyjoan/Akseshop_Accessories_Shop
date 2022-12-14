@@ -34,10 +34,8 @@ use Illuminate\Support\Facades\Artisan;
 // Route::get('/product', [LandingPageController::class, 'product']); //Menampilkan Halaman Product
 
 Route::get('/mysql', function () {
-    // Artisan::call('migrate:fresh --seed',['--force' => true]);
-    Artisan::call('config:clear');
-    Artisan::call('migrate:fresh',['--force' => true]);
-    // Artisan::call('migrate:install');
+    //Artisan::call('migrate:rollback', ['--force' => true]);
+    Artisan::call('migrate:fresh', ['--force' => true]);
     Artisan::call('db:seed', ['--force' => true]);
 });
 
