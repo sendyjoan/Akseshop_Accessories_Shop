@@ -33,11 +33,11 @@ use Illuminate\Support\Facades\Artisan;
 // Route::get('/about', [LandingPageController::class, 'aboutus']); //Menampilkan Halaman About Us
 // Route::get('/product', [LandingPageController::class, 'product']); //Menampilkan Halaman Product
 
-Route::get('/mysql', function () {
-    // Artisan::call('migrate:rollback', ['--force' => true]);
-    Artisan::call('migrate', ['--force' => true]);
-    Artisan::call('db:seed', ['--force'=>true]);
-});
+// Route::get('/mysql', function () {
+//     // Artisan::call('migrate:rollback', ['--force' => true]);
+//     Artisan::call('migrate', ['--force' => true]);
+//     Artisan::call('db:seed', ['--force'=>true]);
+// });
 
 Route::prefix('dashboard')->group(function () {
     Route::resource('users', UserController::class)->middleware('checkRole: 1');
