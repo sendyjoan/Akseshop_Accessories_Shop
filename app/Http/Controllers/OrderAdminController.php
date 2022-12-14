@@ -18,7 +18,7 @@ class OrderAdminController extends Controller
     {
         $user = Auth::user();
         $orders = Order::with('user_id')->get();
-        return view('admin/transaksi/transaksiIndex', compact('user', 'orders'), ['title' => 'List Transaksi', 'active' => 'transaksi']);
+        return view('Admin.Transaksi.transaksiIndex', compact('user', 'orders'), ['title' => 'List Transaksi', 'active' => 'transaksi']);
     }
 
     /**
