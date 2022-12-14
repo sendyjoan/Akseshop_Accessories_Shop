@@ -32,7 +32,7 @@ class ProductController extends Controller
     {
         $categories = Category::all();
         $user = Auth::user();
-        return view('admin.barang.createBarang',['categories' => $categories, 'user' => $user, 'title' => 'Create Product', 'active' => 'barang']);
+        return view('admin.Barang.createBarang',['categories' => $categories, 'user' => $user, 'title' => 'Create Product', 'active' => 'barang']);
     }
 
     /**
