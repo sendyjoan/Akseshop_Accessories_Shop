@@ -22,7 +22,7 @@
                                     <tr>
                                     <td class="thumbnail-img">
                                         <a href="#">
-									<img class="img-fluid" src="{{ asset('storage/'.$chart->product_id->gambar)}}" alt="" />
+									<img class="img-fluid" src="{{$chart->product_id->gambar}}" alt="" />
 								</a>
                                     </td>
                                     <td class="name-pr">

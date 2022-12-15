@@ -9,7 +9,7 @@
                 <div class="col-xl-5 col-lg-5 col-md-6">
                     <div id="carousel-example-1" class="single-product-slider carousel slide" data-ride="carousel">
                         <div class="carousel-inner">
-                            <div class="carousel-item active"> <img class="d-block w-100" src="{{asset('storage/'.$product->gambar)}}" alt="First slide"> </div>
+                            <div class="carousel-item active"> <img class="d-block w-100" src="{{$product->gambar}}" alt="First slide"> </div>
                         </div>
                     </div>
                 </div>
