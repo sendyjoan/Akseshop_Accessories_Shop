@@ -32,7 +32,7 @@
                 <div class="col-lg-3 col-md-6 special-grid podded-vegetables">
                     <div class="products-single fix">
                         <div class="box-img-hover">
-                            <img src="{{asset('storage/'.$product->gambar)}}" class="img-fluid" alt="Image">
+                            <img src="{{$product->gambar)}}" class="img-fluid" alt="Image">
                             <div class="mask-icon">
                                 <ul>
                                     <li><a href="{{ route('barang.show', $product->idproduct)}}" data-toggle="tooltip" data-placement="right" title="View"><i class="fas fa-eye"></i></a></li>
