@@ -15,6 +15,6 @@ class LandingPageController extends Controller
     }
 
     public function aboutus(){
-        return view('User/About');
+        return view('User/about');
     }
 }

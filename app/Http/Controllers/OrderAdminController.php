@@ -52,7 +52,7 @@ class OrderAdminController extends Controller
     {
         $details = Order_Detail::where('order_id_idorder', $id)->get();
         $user = Auth::user();
-        return view('admin/transaksi/detailTransaksi', compact('details', 'user'), ['title' => 'Detail Transaksi', 'active' => 'transaksi']);
+        return view('Admin.Transaksi.detailTransaksi', compact('details', 'user'), ['title' => 'Detail Transaksi', 'active' => 'transaksi']);
     }
 
     /**

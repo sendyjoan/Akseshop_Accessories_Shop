@@ -128,7 +128,7 @@ class ProductController extends Controller
     {
         $product = Product::with('category_id')->where('idproduct', $id)->first();
         $user = Auth::user();
-        return view('admin.barang.detailBarang', compact('product', 'user'), ['title' => 'Detail Product', 'active' => 'barang']);
+        return view('Admin.Barang.detailBarang', compact('product', 'user'), ['title' => 'Detail Product', 'active' => 'barang']);
     }
 
     /**
@@ -142,7 +142,7 @@ class ProductController extends Controller
         $product = Product::with('category_id')->where('idproduct', $id)->first();
         $categori = Category::all();
         $user = Auth::user();
-        return view('admin/barang/updateBarang', compact('product', 'user', 'categori'), ['title' => 'Edit Product', 'active' => 'barang']);
+        return view('Admin/Barang/updateBarang', compact('product', 'user', 'categori'), ['title' => 'Edit Product', 'active' => 'barang']);
     }
 
     /**
