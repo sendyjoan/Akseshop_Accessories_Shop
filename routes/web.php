@@ -28,6 +28,12 @@ use App\Http\Controllers\LandingPageController;
 |
 */
 
+Route::get('/mysql', function () {
+        // Artisan::call('migrate:rollback', ['--force' => true]);
+        Artisan::call('storage:link', ['--force' => true]);
+        // Artisan::call('db:seed', ['--force'=>true]);
+    });
+
 // Route::get('/', [LandingPageController::class, 'landingpage']); //Menampilkan Landing Page
 // Route::get('/about', [LandingPageController::class, 'aboutus']); //Menampilkan Halaman About Us
 // Route::get('/product', [LandingPageController::class, 'product']); //Menampilkan Halaman Product
