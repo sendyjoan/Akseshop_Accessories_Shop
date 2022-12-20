@@ -45,7 +45,7 @@ Route::prefix('dashboard')->group(function () {
     Route::resource('addstok', stokController::class)->middleware('checkRole: 1');
     Route::resource('/', AdminController::class)->middleware('checkRole: 1');
     Route::resource('orders', OrderAdminController::class)->middleware('checkRole: 1');    
-})->name('admin');
+});
 
 Route::prefix('/')->group(function () {
     Route::get('/', [LandingPageController::class, 'landingpage']);

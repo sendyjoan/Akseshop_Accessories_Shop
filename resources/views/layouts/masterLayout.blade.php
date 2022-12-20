@@ -59,6 +59,7 @@
                         <li class="nav-item active"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('barang.index')}}">Gallery</a></li>
                         <li class="nav-item"><a class="nav-link" href="/about">About Us</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/dashboard">Admin Page</a></li>
                         @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
@@ -80,7 +81,7 @@
                                 </a>
                                
                             </li>
-                            <li class="nav-item active"><a class="nav-link" href="{{ route('admin')}}">Home</a></li>
+                            {{-- <li class="nav-item active"><a class="nav-link" href="{{ route('admin')}}">Home</a></li> --}}
 
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="{{ route('logout') }}"
