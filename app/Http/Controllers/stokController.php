@@ -71,7 +71,7 @@ class stokController extends Controller
     {
         $user = Auth::user();
         $product = Product::where('idproduct', $id)->first();
-        return view('Admin.Stok.stokindex', compact('user', 'product'), ['title' => 'Add Stock Product', 'active' => 'barang']);
+        return view('Admin.Stok.stokIndex', compact('user', 'product'), ['title' => 'Add Stock Product', 'active' => 'barang']);
     }
 
     /**

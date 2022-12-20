@@ -30,7 +30,7 @@ class CategoryController extends Controller
     public function create()
     {
         $user = Auth::user();
-        return view('admin/kategori/createKategori',['title' => 'List Kategori', 'active' => 'kategori', 'user' => $user]);
+        return view('Admin.Kategori.createKategori',['title' => 'List Kategori', 'active' => 'kategori', 'user' => $user]);
     }
 
 
@@ -79,7 +79,7 @@ class CategoryController extends Controller
     {
         $categories=Category::where('idkategori', $id)->first();
         $user = Auth::user();
-        return view('admin.kategori.updateKategori', compact('categories', 'user'),['title' => ' Update Kategori', 'active' => 'kategori']);
+        return view('Admin.Kategori.updateKategori', compact('categories', 'user'),['title' => ' Update Kategori', 'active' => 'kategori']);
     }
 
     /**
